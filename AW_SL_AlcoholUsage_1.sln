@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "AW_SL_AlcoholUsage_1", "AW_SL_AlcoholUsage_1\AW_SL_AlcoholUsage_1.dtproj", "{DEFB60CE-FE1A-42F4-8963-B0F5CDDF94D8}"
+EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "AW_SL_AlcoholUsage_Cube", "AW_SL_AlcoholUsage_Cube\AW_SL_AlcoholUsage_Cube.dwproj", "{2E500E26-3B89-4D5A-A6B6-548E02E9BF60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Azure|Default = Azure|Default
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEFB60CE-FE1A-42F4-8963-B0F5CDDF94D8}.Azure|Default.ActiveCfg = Azure
+		{DEFB60CE-FE1A-42F4-8963-B0F5CDDF94D8}.Azure|Default.Build.0 = Azure
+		{DEFB60CE-FE1A-42F4-8963-B0F5CDDF94D8}.Development|Default.ActiveCfg = Development
+		{DEFB60CE-FE1A-42F4-8963-B0F5CDDF94D8}.Development|Default.Build.0 = Development
+		{2E500E26-3B89-4D5A-A6B6-548E02E9BF60}.Azure|Default.ActiveCfg = Development
+		{2E500E26-3B89-4D5A-A6B6-548E02E9BF60}.Azure|Default.Build.0 = Development
+		{2E500E26-3B89-4D5A-A6B6-548E02E9BF60}.Azure|Default.Deploy.0 = Development
+		{2E500E26-3B89-4D5A-A6B6-548E02E9BF60}.Development|Default.ActiveCfg = Development
+		{2E500E26-3B89-4D5A-A6B6-548E02E9BF60}.Development|Default.Build.0 = Development
+		{2E500E26-3B89-4D5A-A6B6-548E02E9BF60}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92D4FCD4-F594-4462-842C-DAB585EAD408}
+	EndGlobalSection
+EndGlobal
