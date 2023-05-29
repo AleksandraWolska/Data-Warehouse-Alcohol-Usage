@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="42"
-  DTS:VersionGUID="{DFA8BDC5-DFB9-48ED-99FD-03B03828FC10}">
+  DTS:VersionBuild="43"
+  DTS:VersionGUID="{EF6BC267-B777-4C0C-9197-99C9EB5E41E8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -10365,7 +10365,7 @@
         <NodeLayout
           Size="410.4,41.6"
           Id="Package\Insert data to tables\insert csv data_recorded_alcohol_per_capita_consumption_from_2010"
-          TopLeft="5.5,19.2857141180448" />
+          TopLeft="5.5,19.2857141180447" />
         <NodeLayout
           Size="422.4,41.6"
           Id="Package\Insert data to tables\insert csv data_recorded_alcohol_per_capita_consumption_from_2010_2"
