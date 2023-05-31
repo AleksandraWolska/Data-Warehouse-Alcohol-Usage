@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="71"
-  DTS:VersionGUID="{C09B22BB-C43A-4FCB-BA8C-DD0849E3F7B0}">
+  DTS:VersionBuild="123"
+  DTS:VersionGUID="{4F244C37-60C9-48A4-9362-FD1465E7DC25}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1187,7 +1187,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Add  ExciseDuty constraints"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1203,7 +1203,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Add  HealthWarnings constraints"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1219,7 +1219,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Add AlcoholUsage constraints"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1235,7 +1235,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Add ArrestsForPublicDrinking constraints"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1251,7 +1251,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Add BAC constraints"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1267,7 +1267,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Add Countries constraints"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1283,7 +1283,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Add Expenditure constraints"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1299,7 +1299,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Add RelatedRoadTraffics constraints"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1315,7 +1315,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Add WrittenNationalPolicy constraints"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1331,7 +1331,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Add YoungDrinkers constraints"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1416,6 +1416,84 @@
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Add cube tables  constraints"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{5177946e-087f-4b76-adf6-f6e2ecd9ef71}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Add cube tables  constraints">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Add cube tables  constraints\Add DIM_BAC constraints"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{edbae3a3-dd27-496c-8a4a-439e23dc3743}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Add DIM_BAC constraints"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="ALTER TABLE [DIM_BAC] ADD&#xA; &#xA;CONSTRAINT dim_bac_bg_fk FOREIGN KEY (Bac_Group) REFERENCES BAC_GROUP (BACGROUP);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Add cube tables  constraints\Add DIM_EXCISE_DUTY constraints"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{4e1f488a-7c92-4041-83cb-6059c702510b}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Add DIM_EXCISE_DUTY constraints"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="ALTER TABLE DIM_EXCISE_DUTY ADD&#xA; CONSTRAINT ded_fk_at FOREIGN KEY (AlcoholType) REFERENCES ALCOHOL_TYPE (ID);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Add cube tables  constraints\Add FACT_ALCOHOL_USAGE constraints"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{762b5d1c-0593-44e5-abe4-cedc3d79b2ae}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Add FACT_ALCOHOL_USAGE constraints"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="ALTER TABLE [FACT_ALCOHOL_USAGE] ADD &#xA;CONSTRAINT fact_year_fk FOREIGN KEY ([YEAR]) REFERENCES [DIM_YEAR] ([YEAR]),&#xA;CONSTRAINT fact_country_fk FOREIGN KEY ([COUNTRY]) REFERENCES [DIM_LOCATION] ([COUNTRY]),&#xA;CONSTRAINT fact_alcoholtype_fk FOREIGN KEY ([ALCOHOLTYPE]) REFERENCES [ALCOHOL_TYPE] ([ID]),&#xA;CONSTRAINT fact_bac_fk FOREIGN KEY ([BAC]) REFERENCES [DIM_BAC] ([ID]),&#xA;CONSTRAINT fact_duty_fk FOREIGN KEY ([EXCISET_DUTY]) REFERENCES [DIM_EXCISE_DUTY] ([ID]),&#xA;CONSTRAINT fact_expenditure_fk FOREIGN KEY ([EXPEDITIURE]) REFERENCES [DIM_EXPENDITURE] ([ID]),&#xA;CONSTRAINT fact_youth_fk FOREIGN KEY ([YOUTH_DRINKERS]) REFERENCES [DIM_YOUTH_DRINKERS] ([ID]),&#xA;CONSTRAINT fact_arrests_fk FOREIGN KEY ([ARRESR_FOR_PUBLIC_DRINKING]) REFERENCES [DIM_ARRESTS_FOR_PUBLIC_DRINKING] ([ID]);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Add cube tables  constraints.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{2FEA5F25-2E82-4D79-BB5A-2DFCA6DCE223}"
+          DTS:From="Package\Add cube tables  constraints\Add DIM_EXCISE_DUTY constraints"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Add cube tables  constraints\Add FACT_ALCOHOL_USAGE constraints" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Add cube tables  constraints.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{07c35368-f07a-4606-b87c-601d475ae505}"
+          DTS:From="Package\Add cube tables  constraints\Add DIM_BAC constraints"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\Add cube tables  constraints\Add DIM_EXCISE_DUTY constraints" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Clear tables"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
@@ -1436,7 +1514,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Prepare AlcoholUsage table"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1454,7 +1532,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Prepare AlocoholType table"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1472,7 +1550,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Prepare ArrestsForPublicDrinking table"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1490,7 +1568,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Prepare BAC table"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1508,7 +1586,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Prepare BACGroup table"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1526,7 +1604,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Prepare countries tables"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1544,7 +1622,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Prepare ExciseDuty table"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1562,7 +1640,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Prepare Expenditure table"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1580,7 +1658,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Prepare HealthWarking table"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1598,7 +1676,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Prepare RelatedRoadCrashes table"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1616,7 +1694,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Prepare Sex table"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1634,7 +1712,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Prepare WrittenNationalPolicy table"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1652,7 +1730,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Prepare years"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1670,7 +1748,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Prepare YoundDrinkers table"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1789,6 +1867,252 @@
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Create cube tables"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{7fb52152-0cdb-422e-abe1-6ef76ce6409f}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create cube tables">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Create cube tables\Create ALCOHOL_TYPE table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{8b3892ba-f433-47aa-9db6-4d3252f2913f}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create ALCOHOL_TYPE table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="CREATE TABLE ALCOHOL_TYPE(&#xA; [ID] INT IDENTITY(1,1) PRIMARY KEY,&#xA;[ALCOHOLTYPE] varchar(50));" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create cube tables\Create DIM_ARRESTS_FOR_PUBLIC_DRINKING table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Create DIM_ARRESTS_FOR_PUBLIC_DRINKING table if exists"
+          DTS:DTSID="{37b2c424-9979-442f-ba19-976531c277e8}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create DIM_ARRESTS_FOR_PUBLIC_DRINKING table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="CREATE TABLE [DIM_ARRESTS_FOR_PUBLIC_DRINKING] (&#xA;  [ID] INT identity(1,1) PRIMARY KEY,&#xA;  [YEAR] INT,&#xA;  [COUNTRY] VARCHAR(50),&#xA;  [ARRESTS] FLOAT&#xA;);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create cube tables\Create DIM_BAC table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{1d9f644b-d3dc-4f7b-a3fb-5c0c18dbfbf1}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create DIM_BAC table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="CREATE TABLE [DIM_BAC] (&#xA;  [ID] INT identity(1,1) PRIMARY KEY,&#xA;  [COUNTRY] VARCHAR(50),&#xA;  [YEAR] INT,&#xA;  [BAC_GROUP] VARCHAR(50),&#xA;  [TOLERANCE] REAL&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create cube tables\Create DIM_EXCISE_DUTY table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{d80c2c72-1ca3-4c4c-a3a3-317f44b3bed9}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create DIM_EXCISE_DUTY table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="CREATE TABLE [DIM_EXCISE_DUTY] (&#xA;  [ID] INT identity(1,1) PRIMARY KEY,&#xA;  [YEAR] INT,&#xA;  [COUNTRY] VARCHAR(50),&#xA;  [ALCOHOLTYPE] INT,&#xA;  [EXPENDITURE] REAL&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create cube tables\Create DIM_EXPENDITURE table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{2f7294a5-d8dd-47ae-bbd0-8f1ff8892ab5}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create DIM_EXPENDITURE table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="CREATE TABLE [DIM_EXPENDITURE] (&#xA;  [ID] INT identity(1,1) PRIMARY KEY,&#xA;  [YEAR] INT,&#xA;  [COUNTRY] VARCHAR(50),&#xA;  [VALUE] REAL&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create cube tables\Create DIM_LOCATION table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{96407ac8-93c2-4dc4-8e47-0d4e063fe0ac}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create DIM_LOCATION table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="CREATE TABLE [DIM_LOCATION] (&#xA;  [COUNTRY] VARCHAR(50) PRIMARY KEY,&#xA;  [REGION] VARCHAR(50)&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create cube tables\Create DIM_YEAR table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{0c4d3da2-2563-41a9-b52e-9d628f5646cc}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create DIM_YEAR table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="CREATE TABLE [DIM_YEAR] (&#xA;  [YEAR] INT PRIMARY KEY&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create cube tables\Create DIM_YOUTH_DRINKERS table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{6c340206-cb7a-45bc-ac03-53f1ed0d23fe}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create DIM_YOUTH_DRINKERS table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="CREATE TABLE [DIM_YOUTH_DRINKERS] (&#xA;  [ID] INT identity(1,1) PRIMARY KEY,&#xA;  [COUNTRY] VARCHAR(50),&#xA;  [SEX] VARCHAR(50),&#xA;  [DRINKERS] REAL&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create cube tables\Create FACT_ALCOHOL_USAGE table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{ddb26330-c1a6-476f-bb36-adb8e0142a10}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create FACT_ALCOHOL_USAGE table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="CREATE TABLE [FACT_ALCOHOL_USAGE] (&#xA;  [FACT_ALCOHOL_USAGE_ID] INT identity(1,1) PRIMARY KEY,&#xA;  [COUNTRY] VARCHAR(50),&#xA;  [YEAR] INT,&#xA;  [BAC] INT,&#xA;  [YOUTH_DRINKERS] INT,&#xA;  [EXCISET_DUTY] INT,&#xA;  [ARRESR_FOR_PUBLIC_DRINKING] INT,&#xA;  [EXPEDITIURE] INT,&#xA;  [ALCOHOLTYPE] INT,&#xA;  [CONSUMPTION] REAL,&#xA;  [RELATED_ROAD_TRAFFICS] REAL,&#xA;  [NATIONAL_POLICY] VARCHAR(50),&#xA;  [HEALTH_WARNING] VARCHAR(50)&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create cube tables\DROP BAC_GROUP table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{8d9879b0-ad78-4757-a090-9aff06e3089e}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DROP BAC_GROUP table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="CREATE TABLE [BAC_GROUP](&#xA;  [BACGROUP] varchar(50)PRIMARY KEY);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create cube tables.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{8F2F2781-46CC-41D2-80CE-2B6E9BF052CE}"
+          DTS:From="Package\Create cube tables\Create ALCOHOL_TYPE table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Create cube tables\DROP BAC_GROUP table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create cube tables.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{acd49e34-78ed-4c2e-bf53-313d48fbbd95}"
+          DTS:From="Package\Create cube tables\Create DIM_ARRESTS_FOR_PUBLIC_DRINKING table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Create cube tables\Create DIM_YEAR table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create cube tables.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{1c170eb4-8da4-47a4-a436-531a7ea95c5b}"
+          DTS:From="Package\Create cube tables\Create DIM_YEAR table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Create cube tables\Create DIM_LOCATION table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create cube tables.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{5797bda9-dbd4-4c95-bad1-f0aa9181863a}"
+          DTS:From="Package\Create cube tables\Create DIM_LOCATION table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\Create cube tables\Create DIM_BAC table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create cube tables.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{96242d50-7c4e-4e55-ad9c-7e9e6c6fb95b}"
+          DTS:From="Package\Create cube tables\Create DIM_BAC table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\Create cube tables\Create DIM_EXCISE_DUTY table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create cube tables.PrecedenceConstraints[Constraint 5]"
+          DTS:CreationName=""
+          DTS:DTSID="{df63b73d-d93a-4272-9fba-a4a1533f713a}"
+          DTS:From="Package\Create cube tables\Create DIM_EXCISE_DUTY table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 5"
+          DTS:To="Package\Create cube tables\Create DIM_EXPENDITURE table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create cube tables.PrecedenceConstraints[Constraint 6]"
+          DTS:CreationName=""
+          DTS:DTSID="{671e05a7-1a85-49ec-a64d-2700d3920e92}"
+          DTS:From="Package\Create cube tables\Create DIM_EXPENDITURE table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 6"
+          DTS:To="Package\Create cube tables\Create DIM_YOUTH_DRINKERS table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create cube tables.PrecedenceConstraints[Constraint 7]"
+          DTS:CreationName=""
+          DTS:DTSID="{4a0221ef-55ed-497b-b932-d3cd6e561aef}"
+          DTS:From="Package\Create cube tables\Create DIM_YOUTH_DRINKERS table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 7"
+          DTS:To="Package\Create cube tables\Create FACT_ALCOHOL_USAGE table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create cube tables.PrecedenceConstraints[Constraint 8]"
+          DTS:CreationName=""
+          DTS:DTSID="{836EA64D-3BEC-4113-A2C0-D7F5BB401CBE}"
+          DTS:From="Package\Create cube tables\DROP BAC_GROUP table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 8"
+          DTS:To="Package\Create cube tables\Create DIM_ARRESTS_FOR_PUBLIC_DRINKING table" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Create tables"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
@@ -1806,7 +2130,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create  ExciseDuty table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1822,7 +2146,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create  HealthWarnings table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1838,7 +2162,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create  Sex table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1854,12 +2178,12 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create AlcoholType table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
-              SQLTask:SqlStatementSource="CREATE TABLE [AlcoholType] (&#xA;   [ALCOHOLTYPE] varchar(50) PRIMARY KEY);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="CREATE TABLE [AlcoholType](&#xA;[ALCOHOLTYPE] varchar(50) PRIMARY KEY);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -1870,7 +2194,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create AlcoholUsage table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1886,7 +2210,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create ArrestsForPublicDrinking table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1902,7 +2226,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create BAC table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1918,12 +2242,12 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create BACGroup table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
-              SQLTask:SqlStatementSource="CREATE TABLE [BACGroup] (&#xA;    [BACGROUP] varchar(50) PRIMARY KEY);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="CREATE TABLE [BACGroup](&#xA;  [BACGROUP] varchar(50) PRIMARY KEY);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -1934,7 +2258,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create Countries table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1950,7 +2274,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create Expenditure table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1966,7 +2290,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create Region table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1982,7 +2306,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create RelatedRoadTraffics table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1998,7 +2322,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create WrittenNationalPolicy table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2014,7 +2338,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create years table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2030,7 +2354,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create YoungDrinkers table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2165,19 +2489,35 @@
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Drop cube tables\Drop AlcoholType table"
+          DTS:refId="Package\Drop cube tables\Drop ALCOHOL_TYPE table"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Drop AlcoholType table if exists"
-          DTS:DTSID="{5991D0A5-E771-4302-8BB8-BF8F1BD0F7F5}"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{D1AD3929-6728-4D8E-AA98-EC7BCBA0562C}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="Drop AlcoholType table"
-          DTS:ThreadHint="2">
+          DTS:ObjectName="Drop ALCOHOL_TYPE table"
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
-              SQLTask:SqlStatementSource="DROP TABLE IF EXISTS AlcoholType;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="DROP TABLE IF EXISTS ALCOHOL_TYPE;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Drop cube tables\DROP BAC_GROUP table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{B7139D2F-41A8-4994-83C0-EA2829702E5E}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DROP BAC_GROUP table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="DROP TABLE IF EXISTS BAC_GROUP;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -2188,7 +2528,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop DIM_ARRESTS_FOR_PUBLIC_DRINKING table"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2204,12 +2544,12 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop DIM_BAC table"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
-              SQLTask:SqlStatementSource="DROPT TABLE IF EXISTS DIM_BAC;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="DROP TABLE IF EXISTS DIM_BAC;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -2220,12 +2560,12 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop DIM_EXCISE_DUTY table"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
-              SQLTask:SqlStatementSource="DROPT TABLE IF EXISTS DIM_EXCISE_DUTY;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="DROP TABLE IF EXISTS DIM_EXCISE_DUTY;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -2236,12 +2576,12 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop DIM_EXPENDITURE table"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
-              SQLTask:SqlStatementSource="DROPT TABLE IF EXISTS DIM_EXPENDITURE;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="DROP TABLE IF EXISTS DIM_EXPENDITURE;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -2252,12 +2592,12 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop DIM_LOCATION table"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
-              SQLTask:SqlStatementSource="DROPT TABLE IF EXISTS DIM_LOCATION;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="DROP TABLE IF EXISTS DIM_LOCATION;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -2268,12 +2608,12 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop DIM_YEAR table"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
-              SQLTask:SqlStatementSource="DROPT TABLE IF EXISTS DIM_YEAR;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="DROP TABLE IF EXISTS DIM_YEAR;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -2284,12 +2624,12 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop DIM_YOUTH_DRINKERS table"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
-              SQLTask:SqlStatementSource="DROPT TABLE IF EXISTS DIM_YOUTH_DRINKERS;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="DROP TABLE IF EXISTS DIM_YOUTH_DRINKERS;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -2300,12 +2640,12 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop FACT_ALCOHOL_USAGE table"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
-              SQLTask:SqlStatementSource="DROPT TABLE IF EXISTS FACT_ALCOHOL_USAGE;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="DROP TABLE IF EXISTS FACT_ALCOHOL_USAGE;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -2313,11 +2653,11 @@
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Drop cube tables.PrecedenceConstraints[Constraint]"
           DTS:CreationName=""
-          DTS:DTSID="{01C78AF8-BA24-4487-96C1-4FBBD1C0E484}"
-          DTS:From="Package\Drop cube tables\Drop AlcoholType table"
+          DTS:DTSID="{B029AC5B-742B-4938-8019-62D3500B0A9C}"
+          DTS:From="Package\Drop cube tables\Drop DIM_YOUTH_DRINKERS table"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
-          DTS:To="Package\Drop cube tables\Drop DIM_ARRESTS_FOR_PUBLIC_DRINKING table" />
+          DTS:To="Package\Drop cube tables\Drop ALCOHOL_TYPE table" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Drop cube tables.PrecedenceConstraints[Constraint 1]"
           DTS:CreationName=""
@@ -2369,11 +2709,19 @@
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Drop cube tables.PrecedenceConstraints[Constraint 7]"
           DTS:CreationName=""
-          DTS:DTSID="{C66657E6-6FD2-415A-8CC5-805A80378E52}"
-          DTS:From="Package\Drop cube tables\Drop DIM_YOUTH_DRINKERS table"
+          DTS:DTSID="{3D5D65ED-A244-4C52-9904-7AEC90EE635F}"
+          DTS:From="Package\Drop cube tables\Drop FACT_ALCOHOL_USAGE table"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 7"
-          DTS:To="Package\Drop cube tables\Drop FACT_ALCOHOL_USAGE table" />
+          DTS:To="Package\Drop cube tables\Drop DIM_ARRESTS_FOR_PUBLIC_DRINKING table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Drop cube tables.PrecedenceConstraints[Constraint 8]"
+          DTS:CreationName=""
+          DTS:DTSID="{267CF53A-C37E-42FC-A68F-B4A84E949DAA}"
+          DTS:From="Package\Drop cube tables\Drop ALCOHOL_TYPE table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 8"
+          DTS:To="Package\Drop cube tables\DROP BAC_GROUP table" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
@@ -2394,7 +2742,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop  ExciseDuty table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2410,7 +2758,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop  HealthWarnings table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2426,7 +2774,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop  Sex table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2442,7 +2790,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop AlcoholType table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2458,7 +2806,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop AlcoholUsage table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2474,7 +2822,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop ArrestsForPublicDrinking table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2490,7 +2838,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop BAC table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2506,7 +2854,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop BACGroup table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2522,7 +2870,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop Countries table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2538,7 +2886,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop Expenditure table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2554,7 +2902,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop Region table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2570,7 +2918,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop RelatedRoadTraffics table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2586,7 +2934,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop WrittenNationalPolicy table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2602,7 +2950,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop years table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2618,7 +2966,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop YoundDrinkers table"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10326,6 +10674,251 @@
           DTS:To="Package\Insert data to tables\insert csv data_alcohol_expenditure_as_a_per_cent_of_total_household_expenditure_by_country" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insert into cube tables"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{14e5110f-2cf8-45bd-a3ff-c11b78a84e14}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insert into cube tables">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Insert into cube tables\Create FACT_ALCOHOL_USAGE table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{12e43ab7-8581-4b98-afb3-94f4e31796aa}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create FACT_ALCOHOL_USAGE table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="INSERT INTO FACT_ALCOHOL_USAGE ([COUNTRY], [YEAR], [BAC], [YOUTH_DRINKERS], [EXCISET_DUTY], [ARRESR_FOR_PUBLIC_DRINKING], [EXPEDITIURE], [ALCOHOLTYPE], [CONSUMPTION], [RELATED_ROAD_TRAFFICS], [NATIONAL_POLICY], [HEALTH_WARNING])&#xA;SELECT      au.COUNTRY, au.[YEAR], b.id AS [Bac], yd.id AS [YOUTH_DRINKERS], ed.id AS [EXCISET_DUTY], dafpd.id AS [ARRESR_FOR_PUBLIC_DRINKING], de.id AS [EXPEDITIURE], att.id As [ALCOHOLTYPE], au.[Display Value] As [CONSUMPTION], &#xA;&#x9;&#x9;&#x9;rrt.[Display Value] AS [RELATED_ROAD_TRAFFICS], wnp.[Display Value] AS [NATIONAL_POLICY], hw.[Display Value] AS [HEALTH_WARNING]&#xA;FROM        AlcoholUsage AS au LEFT OUTER JOIN&#xA;                  ALCOHOL_TYPE AS att ON au.ALCOHOLTYPE = att.AlcoholType LEFT OUTER JOIN&#xA;                  HEALTHWARNINGS AS hw ON au.[Country] = hw.[Country] LEFT OUTER JOIN&#xA;                  WRITTENNATIONALPOLICY AS wnp ON au.[Country] = wnp.[Country] LEFT OUTER JOIN&#xA;                  DIM_ARRESTS_FOR_PUBLIC_DRINKING AS dafpd ON au.[YEAR] = dafpd.[YEAR] AND au.COUNTRY = dafpd.Country LEFT OUTER JOIN&#xA;                  DIM_EXPENDITURE AS de ON au.[YEAR] = de.[YEAR] AND au.COUNTRY = de.Country LEFT OUTER JOIN&#xA;                  RELATEDROADTRAFFIC AS rrt ON au.[YEAR] = rrt.[YEAR] AND au.COUNTRY = rrt.Country LEFT OUTER JOIN&#xA;                  DIM_YOUTH_DRINKERS AS yd ON au.COUNTRY = yd.Country LEFT OUTER JOIN&#xA;                  DIM_BAC AS b ON au.COUNTRY = b.Country LEFT OUTER JOIN&#xA;                  DIM_EXCISE_DUTY AS ed ON au.[YEAR] = ed.[YEAR] AND au.COUNTRY = ed.Country AND att.id = ed.ALCOHOLTYPE;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Insert into cube tables\Insert into ALCOHOL_TYPE table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{705661C2-91D6-4156-BC9B-8EF0DB503B1E}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert into ALCOHOL_TYPE table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="INSERT INTO ALCOHOL_TYPE SELECT * FROM AlcoholType;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Insert into cube tables\Insert into BAC_GROUP table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{C7CD72AC-3DDB-48B5-BB52-0AC5D9C693FA}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert into BAC_GROUP table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="INSERT INTO BAC_GROUP SELECT * FROM BACGROUP;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Insert into cube tables\Insert into DIM_ARRESTS_FOR_PUBLIC_DRINKING table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:DTSID="{1b18c15f-b1af-4e33-8005-9b9dc8d2b7c6}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert into DIM_ARRESTS_FOR_PUBLIC_DRINKING table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="INSERT INTO DIM_ARRESTS_FOR_PUBLIC_DRINKING&#xA;SELECT     [YEAR] AS [Year], COUNTRY AS Country, CASE WHEN [Display Value] = 'No data' THEN NULL ELSE [Display Value] END AS [Value]&#xA;FROM        ArrestsForPublicDrinking" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Insert into cube tables\Insert into DIM_BAC table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{f5b0e45b-10ca-47f7-b8d9-d349f60e46eb}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert into DIM_BAC table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="INSERT INTO DIM_BAC&#xA;SELECT b.[Country]&#xA;&#x9;, b.[Year]&#xA;&#x9;, bg.BacGroup&#xA;&#x9;, CASE &#xA;&#x9;&#x9;WHEN b.[Display Value] = '.' THEN 0.0&#xA;&#x9;&#x9;WHEN b.[Display Value] = '0.0005' THEN 0.005&#xA;&#x9;&#x9;WHEN b.[Display Value] = 'none' THEN 0.0&#xA;&#x9;&#x9;WHEN b.[Display Value] = 'sub-national' THEN NULL&#xA;&#x9;&#x9;WHEN b.[Display Value] = 'subnational' THEN NULL&#xA;&#x9;&#x9;WHEN b.[Display Value] = 'total ban' THEN 0.0&#xA;&#x9;&#x9;WHEN b.[Display Value] = 'zero tolerance' THEN 0.0&#xA;&#x9;&#x9;ELSE SUBSTRING(b.[Display Value], 1, 4)&#xA;&#x9;END AS &quot;ValuePC&quot;&#xA;FROM [BAC] b&#xA;JOIN bac_group bg&#xA;&#x9;ON b.BACGROUP = bg.BacGroup" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Insert into cube tables\Insert into DIM_EXCISE_DUTY table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{eda04b27-1e4d-44b1-9e15-5ec960347c86}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert into DIM_EXCISE_DUTY table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="INSERT INTO DIM_EXCISE_DUTY&#xA;SELECT YEAR&#xA;&#x9;, COUNTRY&#xA;&#x9;, [ALCOHOL_TYPE].ID&#xA;&#x9;, [Display Value]&#xA;FROM [ExciseDuty] JOIN [Alcohol_Type] ON&#xA;[ExciseDuty].[AlcoholType] = [Alcohol_Type].[AlcoholType] ;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Insert into cube tables\Insert into DIM_EXPENDITURE table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{b1bf9ee1-ba81-4264-a156-06c7f4457d2b}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert into DIM_EXPENDITURE table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="INSERT INTO DIM_EXPENDITURE&#xA;SELECT YEAR&#xA;&#x9;, COUNTRY&#xA;&#x9;, [Display Value]&#xA;FROM Expenditure;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Insert into cube tables\Insert into DIM_LOCATION table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{6f8f6918-5a57-4ae2-b011-dfdb5293fb5d}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert into DIM_LOCATION table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="INSERT INTO DIM_LOCATION&#xA;SELECT Country, Region&#xA;FROM dbo.Country;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Insert into cube tables\Insert into DIM_YEAR table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{927d365f-8568-4afa-83eb-4b7f977ddaf1}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert into DIM_YEAR table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="INSERT INTO DIM_YEAR&#xA;SELECT     [Year]&#xA;FROM        YEARS" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Insert into cube tables\Insert into DIM_YOUTH_DRINKERS table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{4839e969-35ca-43ca-902f-55ab3fe77f92}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert into DIM_YOUTH_DRINKERS table"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
+              SQLTask:SqlStatementSource="INSERT INTO DIM_YOUTH_DRINKERS&#xA;SELECT     COUNTRY, SEX, SUBSTRING([Display Value], 0, CHARINDEX('[', [Display Value]) - 1) AS Expr1&#xA;FROM        YouthDrinkers" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Insert into cube tables.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{B37DA2B7-AF15-465B-AFCE-F594B99316AF}"
+          DTS:From="Package\Insert into cube tables\Insert into BAC_GROUP table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Insert into cube tables\Insert into ALCOHOL_TYPE table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Insert into cube tables.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{3474abc3-e813-4493-ae56-017e2e1cb4c5}"
+          DTS:From="Package\Insert into cube tables\Insert into DIM_ARRESTS_FOR_PUBLIC_DRINKING table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Insert into cube tables\Insert into DIM_YEAR table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Insert into cube tables.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{8c36af41-0aa5-40b8-8126-68a63cffb985}"
+          DTS:From="Package\Insert into cube tables\Insert into DIM_YEAR table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Insert into cube tables\Insert into DIM_LOCATION table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Insert into cube tables.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{1ea6e8ad-8837-4c23-b6cb-6f7b7cb0a90e}"
+          DTS:From="Package\Insert into cube tables\Insert into DIM_LOCATION table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\Insert into cube tables\Insert into DIM_BAC table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Insert into cube tables.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{ddcfa733-6861-462f-8c0f-c37b64985e19}"
+          DTS:From="Package\Insert into cube tables\Insert into DIM_BAC table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\Insert into cube tables\Insert into DIM_EXCISE_DUTY table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Insert into cube tables.PrecedenceConstraints[Constraint 5]"
+          DTS:CreationName=""
+          DTS:DTSID="{89b58ca2-31d1-4887-83a2-3a86dcc5a4ef}"
+          DTS:From="Package\Insert into cube tables\Insert into DIM_EXCISE_DUTY table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 5"
+          DTS:To="Package\Insert into cube tables\Insert into DIM_EXPENDITURE table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Insert into cube tables.PrecedenceConstraints[Constraint 6]"
+          DTS:CreationName=""
+          DTS:DTSID="{db6fda06-6ad2-4901-982c-477f60f0d9a5}"
+          DTS:From="Package\Insert into cube tables\Insert into DIM_EXPENDITURE table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 6"
+          DTS:To="Package\Insert into cube tables\Insert into DIM_YOUTH_DRINKERS table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Insert into cube tables.PrecedenceConstraints[Constraint 7]"
+          DTS:CreationName=""
+          DTS:DTSID="{8b5aec08-3702-46bf-9219-34dd99ab72a8}"
+          DTS:From="Package\Insert into cube tables\Insert into DIM_YOUTH_DRINKERS table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 7"
+          DTS:To="Package\Insert into cube tables\Create FACT_ALCOHOL_USAGE table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Insert into cube tables.PrecedenceConstraints[Constraint 8]"
+          DTS:CreationName=""
+          DTS:DTSID="{08BA623B-6245-49E7-9C64-98E83953E266}"
+          DTS:From="Package\Insert into cube tables\Insert into ALCOHOL_TYPE table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 8"
+          DTS:To="Package\Insert into cube tables\Insert into DIM_ARRESTS_FOR_PUBLIC_DRINKING table" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -10360,6 +10953,38 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\Insert constants" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{1EB0AE64-E066-4506-8A76-A654F5B1AEED}"
+      DTS:From="Package\Drop cube tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Create cube tables" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{536B0552-252F-4F76-A388-CF3F1D2E1839}"
+      DTS:From="Package\Create cube tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Add cube tables  constraints" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{B4CA896D-CEE2-4E17-914B-78C9F6139D57}"
+      DTS:From="Package\Add cube tables  constraints"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\Insert into cube tables" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{D793F7FF-FD59-4D19-B9AF-E59F47DDA748}"
+      DTS:From="Package\Insert data to tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\Drop cube tables" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -10666,6 +11291,69 @@
           Size="394,879"
           Id="Package\Add constraints"
           TopLeft="1713.33333333333,521.111111111111" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Add cube tables  constraints\Add DIM_BAC constraints"
+          TopLeft="124.982683977615,34.0285207661098" />
+        <NodeLayout
+          Size="224,42"
+          Id="Package\Add cube tables  constraints\Add DIM_EXCISE_DUTY constraints"
+          TopLeft="96.8008657957971,109.664884402473" />
+        <NodeLayout
+          Size="270,42"
+          Id="Package\Add cube tables  constraints\Add FACT_ALCOHOL_USAGE constraints"
+          TopLeft="71.1948051719964,193.64171162542" />
+        <EdgeLayout
+          Id="Package\Add cube tables  constraints.PrecedenceConstraints[Constraint]"
+          TopLeft="207.597835483896,151.264884402473">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.3768272229476"
+              Start="0,0"
+              End="0,34.8768272229476">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.8768272229476" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Add cube tables  constraints.PrecedenceConstraints[Constraint 4]"
+          TopLeft="212.391774886706,76.0285207661098">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.6363636363635"
+              Start="0,0"
+              End="0,26.1363636363635">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.1363636363635" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="381,264"
+          Size="381,307"
+          Id="Package\Add cube tables  constraints"
+          TopLeft="4272.47121132294,537.643801379236" />
         <NodeLayout
           Size="208,42"
           Id="Package\Clear tables\Prepare AlcoholUsage table"
@@ -11088,6 +11776,275 @@
           Id="Package\Clear tables"
           TopLeft="0.142857179349676,534.264705790523" />
         <NodeLayout
+          Size="214,42"
+          Id="Package\Create cube tables\Create ALCOHOL_TYPE table"
+          TopLeft="82.9238177610109,38.8973867101435" />
+        <NodeLayout
+          Size="330,42"
+          Id="Package\Create cube tables\Create DIM_ARRESTS_FOR_PUBLIC_DRINKING table"
+          TopLeft="84.9610389230252,236.44563269021" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Create cube tables\Create DIM_BAC table"
+          TopLeft="109.50649346848,462.263814508392" />
+        <NodeLayout
+          Size="224,42"
+          Id="Package\Create cube tables\Create DIM_EXCISE_DUTY table"
+          TopLeft="81.3246752866617,537.900178144755" />
+        <NodeLayout
+          Size="225,42"
+          Id="Package\Create cube tables\Create DIM_EXPENDITURE table"
+          TopLeft="84.9610389230252,607.172905417483" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Create cube tables\Create DIM_LOCATION table"
+          TopLeft="102.233766195753,394.265597038468" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Create cube tables\Create DIM_YEAR table"
+          TopLeft="102.233766195753,323.718359962937" />
+        <NodeLayout
+          Size="236,42"
+          Id="Package\Create cube tables\Create DIM_YOUTH_DRINKERS table"
+          TopLeft="86.7792207412072,690.081996326573" />
+        <NodeLayout
+          Size="270,42"
+          Id="Package\Create cube tables\Create FACT_ALCOHOL_USAGE table"
+          TopLeft="64.0519480139346,768.44563269021" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Create cube tables\DROP BAC_GROUP table"
+          TopLeft="92.9952468633569,118.279739677573" />
+        <EdgeLayout
+          Id="Package\Create cube tables.PrecedenceConstraints[Constraint]"
+          TopLeft="190.159532312184,80.4973867101434">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.7823529674296"
+              Start="0,0"
+              End="0,30.2823529674296">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.2823529674296" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create cube tables.PrecedenceConstraints[Constraint 1]"
+          TopLeft="249.761038923025,278.04563269021">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-56.3272727272721,45.672727272727"
+              Start="0,0"
+              End="-56.3272727272721,38.172727272727">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.8363636363635" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.8363636363635"
+                    Point2="0,22.8363636363635"
+                    Point3="-4,22.8363636363635" />
+                  <mssgle:LineSegment
+                    End="-52.3272727272721,22.8363636363635" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-52.3272727272721,22.8363636363635"
+                    Point2="-56.3272727272721,22.8363636363635"
+                    Point3="-56.3272727272721,26.8363636363635" />
+                  <mssgle:LineSegment
+                    End="-56.3272727272721,38.172727272727" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create cube tables.PrecedenceConstraints[Constraint 2]"
+          TopLeft="193.433766195753,365.318359962937">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.9472370755313"
+              Start="0,0"
+              End="0,21.4472370755313">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.4472370755313" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create cube tables.PrecedenceConstraints[Constraint 3]"
+          TopLeft="197.070129832117,435.865597038468">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.3982174699236"
+              Start="0,0"
+              End="0,18.8982174699236">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.8982174699236" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create cube tables.PrecedenceConstraints[Constraint 4]"
+          TopLeft="196.915584377571,504.263814508392">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.6363636363635"
+              Start="0,0"
+              End="0,26.1363636363635">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.1363636363635" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create cube tables.PrecedenceConstraints[Constraint 5]"
+          TopLeft="195.392857104843,579.900178144755">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.2727272727273"
+              Start="0,0"
+              End="0,19.7727272727273">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.7727272727273" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create cube tables.PrecedenceConstraints[Constraint 6]"
+          TopLeft="201.120129832116,649.172905417483">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.9090909090905"
+              Start="0,0"
+              End="0,33.4090909090905">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.4090909090905" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create cube tables.PrecedenceConstraints[Constraint 7]"
+          TopLeft="201.915584377571,732.081996326573">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.3636363636365"
+              Start="0,0"
+              End="0,28.8636363636365">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.8636363636365" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create cube tables.PrecedenceConstraints[Constraint 8]"
+          TopLeft="190.195246863357,159.879739677573">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="59.5657920596683,76.5658930126368"
+              Start="0,0"
+              End="59.5657920596683,69.0658930126368">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.2829465063184" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.2829465063184"
+                    Point2="0,38.2829465063184"
+                    Point3="4,38.2829465063184" />
+                  <mssgle:LineSegment
+                    End="55.5657920596683,38.2829465063184" />
+                  <mssgle:CubicBezierSegment
+                    Point1="55.5657920596683,38.2829465063184"
+                    Point2="59.5657920596683,38.2829465063184"
+                    Point3="59.5657920596683,42.2829465063184" />
+                  <mssgle:LineSegment
+                    End="59.5657920596683,69.0658930126368" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="419,865"
+          Size="419,908"
+          Id="Package\Create cube tables"
+          TopLeft="3769.34978258425,532.477134655594" />
+        <NodeLayout
           Size="212,42"
           Id="Package\Create tables\Create  ExciseDuty table"
           TopLeft="86.4444444444446,97" />
@@ -11116,7 +12073,7 @@
           Id="Package\Create tables\Create BAC table"
           TopLeft="129,656" />
         <NodeLayout
-          Size="173,42"
+          Size="187,42"
           Id="Package\Create tables\Create BACGroup table"
           TopLeft="138,737" />
         <NodeLayout
@@ -11193,13 +12150,13 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Create tables.PrecedenceConstraints[Constraint 10]"
-          TopLeft="224.5,779">
+          TopLeft="231.5,779">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-18.5,38"
+              EndConnector="-25.5,38"
               Start="0,0"
-              End="-18.5,30.5">
+              End="-25.5,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -11210,13 +12167,13 @@
                     Point2="0,19"
                     Point3="-4,19" />
                   <mssgle:LineSegment
-                    End="-14.5,19" />
+                    End="-21.5,19" />
                   <mssgle:CubicBezierSegment
-                    Point1="-14.5,19"
-                    Point2="-18.5,19"
-                    Point3="-18.5,23" />
+                    Point1="-21.5,19"
+                    Point2="-25.5,19"
+                    Point3="-25.5,23" />
                   <mssgle:LineSegment
-                    End="-18.5,30.5" />
+                    End="-25.5,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11487,9 +12444,9 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="8.5,39"
+              EndConnector="15.5,39"
               Start="0,0"
-              End="8.5,31.5">
+              End="15.5,31.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -11500,13 +12457,13 @@
                     Point2="0,19.5"
                     Point3="4,19.5" />
                   <mssgle:LineSegment
-                    End="4.5,19.5" />
+                    End="11.5,19.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="4.5,19.5"
-                    Point2="8.5,19.5"
-                    Point3="8.5,23.5" />
+                    Point1="11.5,19.5"
+                    Point2="15.5,19.5"
+                    Point3="15.5,23.5" />
                   <mssgle:LineSegment
-                    End="8.5,31.5" />
+                    End="15.5,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11522,6 +12479,251 @@
           Size="394,1310"
           Id="Package\Create tables"
           TopLeft="1206.5,514.611111111111" />
+        <NodeLayout
+          Size="206,42"
+          Id="Package\Drop cube tables\Drop ALCOHOL_TYPE table"
+          TopLeft="105.557144358662,558.523529265976" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Drop cube tables\DROP BAC_GROUP table"
+          TopLeft="115.628573461009,640.905882233405" />
+        <NodeLayout
+          Size="322,42"
+          Id="Package\Drop cube tables\Drop DIM_ARRESTS_FOR_PUBLIC_DRINKING table"
+          TopLeft="48.4848483606725,75.720142549989" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Drop cube tables\Drop DIM_BAC table"
+          TopLeft="124.077922047511,280.812834170976" />
+        <NodeLayout
+          Size="224,42"
+          Id="Package\Drop cube tables\Drop DIM_EXCISE_DUTY table"
+          TopLeft="97.896103865693,350.449197807339" />
+        <NodeLayout
+          Size="225,42"
+          Id="Package\Drop cube tables\Drop DIM_EXPENDITURE table"
+          TopLeft="89.5324675020565,416.721925080068" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Drop cube tables\Drop DIM_LOCATION table"
+          TopLeft="121.805194774784,213.540106898248" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Drop cube tables\Drop DIM_YEAR table"
+          TopLeft="119.805194774784,146.267379625521" />
+        <NodeLayout
+          Size="236,42"
+          Id="Package\Drop cube tables\Drop DIM_YOUTH_DRINKERS table"
+          TopLeft="91.3506493202385,484.631015989158" />
+        <NodeLayout
+          Size="270,42"
+          Id="Package\Drop cube tables\Drop FACT_ALCOHOL_USAGE table"
+          TopLeft="66.623376592966,5.5" />
+        <EdgeLayout
+          Id="Package\Drop cube tables.PrecedenceConstraints[Constraint 1]"
+          TopLeft="210.145021567728,117.720142549989">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.5472370755321"
+              Start="0,0"
+              End="0,21.0472370755321">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.0472370755321" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Drop cube tables.PrecedenceConstraints[Constraint 2]"
+          TopLeft="211.805194774784,188.267379625521">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.272727272727"
+              Start="0,0"
+              End="0,17.772727272727">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.772727272727" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Drop cube tables.PrecedenceConstraints[Constraint 3]"
+          TopLeft="213.941558411148,255.540106898248">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.2727272727279"
+              Start="0,0"
+              End="0,17.7727272727279">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.7727272727279" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Drop cube tables.PrecedenceConstraints[Constraint 4]"
+          TopLeft="212.487012956602,322.812834170976">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.6363636363631"
+              Start="0,0"
+              End="0,20.1363636363631">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.1363636363631" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Drop cube tables.PrecedenceConstraints[Constraint 5]"
+          TopLeft="205.964285683875,392.449197807339">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24.2727272727291"
+              Start="0,0"
+              End="0,16.7727272727291">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.7727272727291" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Drop cube tables.PrecedenceConstraints[Constraint 6]"
+          TopLeft="205.691558411148,458.721925080068">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.9090909090899"
+              Start="0,0"
+              End="0,18.4090909090899">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.4090909090899" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Drop cube tables.PrecedenceConstraints[Constraint 8]"
+          TopLeft="210.592858909836,600.523529265976">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.3823529674298"
+              Start="0,0"
+              End="0,32.8823529674298">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.8823529674298" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Drop cube tables.PrecedenceConstraints[Constraint]"
+          TopLeft="208.95389683945,526.631015989158">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.8925132768177"
+              Start="0,0"
+              End="0,24.3925132768177">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.3925132768177" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Drop cube tables.PrecedenceConstraints[Constraint 7]"
+          TopLeft="205.554112476819,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.220142549989"
+              Start="0,0"
+              End="0,20.720142549989">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.720142549989" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="415,808"
+          Size="415,851"
+          Id="Package\Drop cube tables"
+          TopLeft="3269.02597293373,537.834224588876" />
         <NodeLayout
           Size="186,42"
           Id="Package\Drop Tables\Drop  ExciseDuty table"
@@ -12375,10 +13577,315 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="591,871"
-          Size="591,914"
+          PanelSize="591,696"
+          Size="591,739"
           Id="Package\Insert data to tables"
           TopLeft="2538.00680457483,523.698879453767" />
+        <NodeLayout
+          Size="270,42"
+          Id="Package\Insert into cube tables\Create FACT_ALCOHOL_USAGE table"
+          TopLeft="81.9090909090905,644.818181818182" />
+        <NodeLayout
+          Size="348,42"
+          Id="Package\Insert into cube tables\Insert into DIM_ARRESTS_FOR_PUBLIC_DRINKING table"
+          TopLeft="102.818181818181,112.818181818182" />
+        <NodeLayout
+          Size="202,42"
+          Id="Package\Insert into cube tables\Insert into DIM_BAC table"
+          TopLeft="127.363636363636,338.636363636364" />
+        <NodeLayout
+          Size="224,42"
+          Id="Package\Insert into cube tables\Insert into DIM_EXCISE_DUTY table"
+          TopLeft="99.1818181818176,414.272727272727" />
+        <NodeLayout
+          Size="225,42"
+          Id="Package\Insert into cube tables\Insert into DIM_EXPENDITURE table"
+          TopLeft="102.818181818181,483.545454545455" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Insert into cube tables\Insert into DIM_LOCATION table"
+          TopLeft="120.090909090909,270.63814616644" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Insert into cube tables\Insert into DIM_YEAR table"
+          TopLeft="120.090909090909,200.090909090909" />
+        <NodeLayout
+          Size="236,42"
+          Id="Package\Insert into cube tables\Insert into DIM_YOUTH_DRINKERS table"
+          TopLeft="104.636363636362,566.454545454545" />
+        <EdgeLayout
+          Id="Package\Insert into cube tables.PrecedenceConstraints[Constraint 1]"
+          TopLeft="276.818181818181,154.818181818182">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-65.727272727272,45.272727272727"
+              Start="0,0"
+              End="-65.727272727272,37.772727272727">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.6363636363635" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.6363636363635"
+                    Point2="0,22.6363636363635"
+                    Point3="-4,22.6363636363635" />
+                  <mssgle:LineSegment
+                    End="-61.727272727272,22.6363636363635" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-61.727272727272,22.6363636363635"
+                    Point2="-65.727272727272,22.6363636363635"
+                    Point3="-65.727272727272,26.6363636363635" />
+                  <mssgle:LineSegment
+                    End="-65.727272727272,37.772727272727" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert into cube tables.PrecedenceConstraints[Constraint 2]"
+          TopLeft="211.290909090909,241.690909090909">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.9472370755314"
+              Start="0,0"
+              End="0,21.4472370755314">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.4472370755314" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert into cube tables.PrecedenceConstraints[Constraint 3]"
+          TopLeft="211.090909090909,312.63814616644">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17.272727272727,25.998217469924"
+              Start="0,0"
+              End="17.272727272727,18.498217469924">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.99910873496202" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.99910873496202"
+                    Point2="0,12.999108734962"
+                    Point3="4,12.999108734962" />
+                  <mssgle:LineSegment
+                    End="13.272727272727,12.999108734962" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.272727272727,12.999108734962"
+                    Point2="17.272727272727,12.999108734962"
+                    Point3="17.272727272727,16.999108734962" />
+                  <mssgle:LineSegment
+                    End="17.272727272727,18.498217469924" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert into cube tables.PrecedenceConstraints[Constraint 4]"
+          TopLeft="228.363636363636,380.636363636364">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-17.1818181818184,33.636363636363"
+              Start="0,0"
+              End="-17.1818181818184,26.136363636363">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.8181818181815" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.8181818181815"
+                    Point2="0,16.8181818181815"
+                    Point3="-4,16.8181818181815" />
+                  <mssgle:LineSegment
+                    End="-13.1818181818184,16.8181818181815" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.1818181818184,16.8181818181815"
+                    Point2="-17.1818181818184,16.8181818181815"
+                    Point3="-17.1818181818184,20.8181818181815" />
+                  <mssgle:LineSegment
+                    End="-17.1818181818184,26.136363636363" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert into cube tables.PrecedenceConstraints[Constraint 5]"
+          TopLeft="213.249999999999,456.272727272727">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.2727272727273"
+              Start="0,0"
+              End="0,19.7727272727273">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.7727272727273" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert into cube tables.PrecedenceConstraints[Constraint 6]"
+          TopLeft="218.927272727272,525.145454545455">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.3090909090901"
+              Start="0,0"
+              End="0,33.8090909090901">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.8090909090901" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert into cube tables.PrecedenceConstraints[Constraint 7]"
+          TopLeft="219.872727272726,608.054545454545">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.7636363636369"
+              Start="0,0"
+              End="0,29.2636363636369">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.2636363636369" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Insert into cube tables\Insert into BAC_GROUP table"
+          TopLeft="39.4444444444453,13.2777777777778" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Insert into cube tables\Insert into ALCOHOL_TYPE table"
+          TopLeft="265.000000000001,32.1111111111112" />
+        <EdgeLayout
+          Id="Package\Insert into cube tables.PrecedenceConstraints[Constraint]"
+          TopLeft="202.444444444445,34.2777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="62.5555555555557,18.8333333333334"
+              Start="0,0"
+              End="55.0555555555557,18.8333333333334">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="27.2777777777778,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.2777777777778,0"
+                    Point2="31.2777777777778,0"
+                    Point3="31.2777777777778,4" />
+                  <mssgle:LineSegment
+                    End="31.2777777777778,14.8333333333334" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.2777777777778,14.8333333333334"
+                    Point2="31.2777777777778,18.8333333333334"
+                    Point3="35.2777777777778,18.8333333333334" />
+                  <mssgle:LineSegment
+                    End="55.0555555555557,18.8333333333334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert into cube tables.PrecedenceConstraints[Constraint 8]"
+          TopLeft="346.500000000001,74.1111111111112">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-69.6818181818199,38.7070707070708"
+              Start="0,0"
+              End="-69.6818181818199,31.2070707070708">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.3535353535354" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.3535353535354"
+                    Point2="0,19.3535353535354"
+                    Point3="-4,19.3535353535354" />
+                  <mssgle:LineSegment
+                    End="-65.6818181818199,19.3535353535354" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-65.6818181818199,19.3535353535354"
+                    Point2="-69.6818181818199,19.3535353535354"
+                    Point3="-69.6818181818199,23.3535353535354" />
+                  <mssgle:LineSegment
+                    End="-69.6818181818199,31.2070707070708" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="485,765"
+          Size="485,808"
+          Id="Package\Insert into cube tables"
+          TopLeft="4734.52121132294,526.124193548387" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="1066.45929013555,1159.87419354839">
@@ -12449,30 +13956,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="2463.70748434321,784.579831820068">
+          TopLeft="2463.50748434321,784.679831820068">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="74.2993202316165,196.119047633698"
+              EndConnector="74.4993202316195,108.619047633699"
               Start="0,0"
-              End="66.7993202316165,196.119047633698">
+              End="66.9993202316195,108.619047633699">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="33.1496601158083,0" />
+                    End="33.2496601158098,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="33.1496601158083,0"
-                    Point2="37.1496601158083,0"
-                    Point3="37.1496601158083,4" />
+                    Point1="33.2496601158098,0"
+                    Point2="37.2496601158098,0"
+                    Point3="37.2496601158098,4" />
                   <mssgle:LineSegment
-                    End="37.1496601158083,192.119047633698" />
+                    End="37.2496601158098,104.619047633699" />
                   <mssgle:CubicBezierSegment
-                    Point1="37.1496601158083,192.119047633698"
-                    Point2="37.1496601158083,196.119047633698"
-                    Point3="41.1496601158083,196.119047633698" />
+                    Point1="37.2496601158098,104.619047633699"
+                    Point2="37.2496601158098,108.619047633699"
+                    Point3="41.2496601158098,108.619047633699" />
                   <mssgle:LineSegment
-                    End="66.7993202316165,196.119047633698" />
+                    End="66.9993202316195,108.619047633699" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12515,6 +14022,142 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="3684.02597293373,963.334224588876">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="85.3238096505202,23.1429100667178"
+              Start="0,0"
+              End="77.8238096505202,23.1429100667178">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="38.6619048252601,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38.6619048252601,0"
+                    Point2="42.6619048252601,0"
+                    Point3="42.6619048252601,4" />
+                  <mssgle:LineSegment
+                    End="42.6619048252601,19.1429100667178" />
+                  <mssgle:CubicBezierSegment
+                    Point1="42.6619048252601,19.1429100667178"
+                    Point2="42.6619048252601,23.1429100667178"
+                    Point3="46.6619048252601,23.1429100667178" />
+                  <mssgle:LineSegment
+                    End="77.8238096505202,23.1429100667178" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="4188.34978258425,986.477134655594">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="84.1214287386902,-295.333333276358"
+              Start="0,0"
+              End="76.6214287386902,-295.333333276358">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="38.0607143693451,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38.0607143693451,0"
+                    Point2="42.0607143693451,0"
+                    Point3="42.0607143693451,-4" />
+                  <mssgle:LineSegment
+                    End="42.0607143693451,-291.333333276358" />
+                  <mssgle:CubicBezierSegment
+                    Point1="42.0607143693451,-291.333333276358"
+                    Point2="42.0607143693451,-295.333333276358"
+                    Point3="46.0607143693451,-295.333333276358" />
+                  <mssgle:LineSegment
+                    End="76.6214287386902,-295.333333276358" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="4653.47121132294,691.143801379236">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81.0500000000002,238.980392169151"
+              Start="0,0"
+              End="73.5500000000002,238.980392169151">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="36.5250000000001,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.5250000000001,0"
+                    Point2="40.5250000000001,0"
+                    Point3="40.5250000000001,4" />
+                  <mssgle:LineSegment
+                    End="40.5250000000001,234.980392169151" />
+                  <mssgle:CubicBezierSegment
+                    Point1="40.5250000000001,234.980392169151"
+                    Point2="40.5250000000001,238.980392169151"
+                    Point3="44.5250000000001,238.980392169151" />
+                  <mssgle:LineSegment
+                    End="73.5500000000002,238.980392169151" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="3129.00680457483,893.198879453767">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="140.0191683589,70.1353451351092"
+              Start="0,0"
+              End="132.5191683589,70.1353451351092">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="66.00958417945,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="66.00958417945,0"
+                    Point2="70.00958417945,0"
+                    Point3="70.00958417945,4" />
+                  <mssgle:LineSegment
+                    End="70.00958417945,66.1353451351092" />
+                  <mssgle:CubicBezierSegment
+                    Point1="70.00958417945,66.1353451351092"
+                    Point2="70.00958417945,70.1353451351092"
+                    Point3="74.00958417945,70.1353451351092" />
+                  <mssgle:LineSegment
+                    End="132.5191683589,70.1353451351092" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <AnnotationLayout
           Text="data_legal_BAC_limits_by_country&#xA;data_recorded_alcohol_per_capita_consumption_2000_2009&#xA;15_19_years_old_current_drinkers_percent_by_country&#xA;data_recorded_alcohol_per_capita_consumption_from_2010"
           ParentId="Package"
@@ -12522,237 +14165,6 @@
           Size="343,88"
           Id="4989c626-e220-480c-9109-ae42639229e9"
           TopLeft="2143.70068113533,1090.10784244484" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Drop cube tables\Drop AlcoholType table"
-          TopLeft="113.727272727273,27.3636363636364" />
-        <NodeLayout
-          Size="225,54"
-          Id="Package\Drop cube tables\Drop DIM_ARRESTS_FOR_PUBLIC_DRINKING table"
-          TopLeft="102.818181818181,112.818181818182" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Drop cube tables\Drop DIM_YEAR table"
-          TopLeft="120.090909090909,200.090909090909" />
-        <EdgeLayout
-          Id="Package\Drop cube tables.PrecedenceConstraints[Constraint]"
-          TopLeft="195.227272727273,69.3636363636364">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="20.0909090909086,43.4545454545455"
-              Start="0,0"
-              End="20.0909090909086,35.9545454545455">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.7272727272727" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.7272727272727"
-                    Point2="0,21.7272727272727"
-                    Point3="4,21.7272727272727" />
-                  <mssgle:LineSegment
-                    End="16.0909090909086,21.7272727272727" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.0909090909086,21.7272727272727"
-                    Point2="20.0909090909086,21.7272727272727"
-                    Point3="20.0909090909086,25.7272727272727" />
-                  <mssgle:LineSegment
-                    End="20.0909090909086,35.9545454545455" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Drop cube tables.PrecedenceConstraints[Constraint 1]"
-          TopLeft="213.204545454545,166.818181818182">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33.2727272727273"
-              Start="0,0"
-              End="0,25.7727272727273">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.7727272727273" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Drop cube tables\Drop DIM_LOCATION table"
-          TopLeft="120.090909090909,269.363636363636" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Drop cube tables\Drop DIM_BAC table"
-          TopLeft="127.363636363636,338.636363636364" />
-        <NodeLayout
-          Size="224,42"
-          Id="Package\Drop cube tables\Drop DIM_EXCISE_DUTY table"
-          TopLeft="99.1818181818176,414.272727272727" />
-        <NodeLayout
-          Size="225,42"
-          Id="Package\Drop cube tables\Drop DIM_EXPENDITURE table"
-          TopLeft="102.818181818181,483.545454545455" />
-        <EdgeLayout
-          Id="Package\Drop cube tables.PrecedenceConstraints[Constraint 2]"
-          TopLeft="211.090909090909,242.090909090909">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27.2727272727271"
-              Start="0,0"
-              End="0,19.7727272727271">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.7727272727271" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Drop cube tables.PrecedenceConstraints[Constraint 3]"
-          TopLeft="214.727272727272,311.363636363636">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27.2727272727275"
-              Start="0,0"
-              End="0,19.7727272727275">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.7727272727275" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Drop cube tables.PrecedenceConstraints[Constraint 4]"
-          TopLeft="214.772727272727,380.636363636364">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33.6363636363635"
-              Start="0,0"
-              End="0,26.1363636363635">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.1363636363635" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Drop cube tables.PrecedenceConstraints[Constraint 5]"
-          TopLeft="213.249999999999,456.272727272727">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27.2727272727273"
-              Start="0,0"
-              End="0,19.7727272727273">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.7727272727273" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="236,42"
-          Id="Package\Drop cube tables\Drop DIM_YOUTH_DRINKERS table"
-          TopLeft="104.636363636363,566.454545454545" />
-        <EdgeLayout
-          Id="Package\Drop cube tables.PrecedenceConstraints[Constraint 6]"
-          TopLeft="218.977272727272,525.545454545455">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40.9090909090908"
-              Start="0,0"
-              End="0,33.4090909090908">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.4090909090908" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="270,42"
-          Id="Package\Drop cube tables\Drop FACT_ALCOHOL_USAGE table"
-          TopLeft="81.9090909090905,644.818181818182" />
-        <EdgeLayout
-          Id="Package\Drop cube tables.PrecedenceConstraints[Constraint 7]"
-          TopLeft="219.772727272727,608.454545454545">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36.3636363636365"
-              Start="0,0"
-              End="0,28.8636363636365">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.8636363636365" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="381,765"
-          Size="381,808"
-          Id="Package\Drop cube tables"
-          TopLeft="3319.45454545455,526.363636363636" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -12760,7 +14172,7 @@
     design-time-name="Package\Insert constants\Extract alcohol types">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="164,42"
           Id="Package\Insert constants\Extract alcohol types\Table AlcoholType"
@@ -12804,7 +14216,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12838,7 +14252,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -12861,7 +14277,7 @@
     design-time-name="Package\Insert constants\Extract BACGroup">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="150,42"
           Id="Package\Insert constants\Extract BACGroup\Flat File Source"
@@ -12893,7 +14309,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12915,7 +14333,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -12938,17 +14358,17 @@
     design-time-name="Package\Insert constants\Extract countries">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="180,42"
+          Size="180,41.6"
           Id="Package\Insert constants\Extract countries\OLE DB Destination 1"
           TopLeft="77.857142895156,319.235293890417" />
         <NodeLayout
-          Size="159,42"
+          Size="159.2,41.6"
           Id="Package\Insert constants\Extract countries\Flat File Source 1"
           TopLeft="70.7142857370936,60" />
         <NodeLayout
-          Size="136,42"
+          Size="136,41.6"
           Id="Package\Insert constants\Extract countries\Aggregate 1"
           TopLeft="60,167.058823435571" />
         <EdgeLayout
@@ -12982,7 +14402,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13016,7 +14438,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13039,17 +14463,17 @@
     design-time-name="Package\Insert constants\Extract regions">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="170,42"
+          Size="169.6,41.6"
           Id="Package\Insert constants\Extract regions\OLE DB Destination"
           TopLeft="201.42857185736,380.058823196276" />
         <NodeLayout
-          Size="150,42"
+          Size="150.4,41.6"
           Id="Package\Insert constants\Extract regions\Flat File Source"
           TopLeft="124.285714550286,111.647058725666" />
         <NodeLayout
-          Size="126,42"
+          Size="126.4,41.6"
           Id="Package\Insert constants\Extract regions\Aggregate"
           TopLeft="165.714286067048,246.235293901812" />
         <EdgeLayout
@@ -13083,7 +14507,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13117,7 +14543,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13140,7 +14568,7 @@
     design-time-name="Package\Insert constants\Extract sex">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="150,42"
           Id="Package\Insert constants\Extract sex\Flat File Source"
@@ -13184,7 +14612,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13218,7 +14648,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13241,7 +14673,7 @@
     design-time-name="Package\Insert constants\Extract years">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="159,42"
           Id="Package\Insert constants\Extract years\Flat File Source 1"
@@ -13293,7 +14725,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13327,7 +14761,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13361,7 +14797,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13395,7 +14833,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13418,7 +14858,7 @@
     design-time-name="Package\Insert data to tables\insert csv 15_19_years_old_current_drinkers_percent_by_country">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="150,42"
           Id="Package\Insert data to tables\insert csv 15_19_years_old_current_drinkers_percent_by_country\Flat File Source"
@@ -13458,7 +14898,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13481,7 +14923,7 @@
     design-time-name="Package\Insert data to tables\insert csv adopted_written_national_policy_on_alcohol">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170,42"
           Id="Package\Insert data to tables\insert csv adopted_written_national_policy_on_alcohol\OLE DB Destination"
@@ -13521,7 +14963,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13544,7 +14988,7 @@
     design-time-name="Package\Insert data to tables\insert csv alcohol_related_road_traffic_crashes_percent">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170,42"
           Id="Package\Insert data to tables\insert csv alcohol_related_road_traffic_crashes_percent\OLE DB Destination"
@@ -13584,7 +15028,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13607,7 +15053,7 @@
     design-time-name="Package\Insert data to tables\insert csv cautions_and_arrests_for_public_drunkness_by_country">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170,42"
           Id="Package\Insert data to tables\insert csv cautions_and_arrests_for_public_drunkness_by_country\OLE DB Destination"
@@ -13647,7 +15093,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13670,7 +15118,7 @@
     design-time-name="Package\Insert data to tables\insert csv data_alcohol_expenditure_as_a_per_cent_of_total_household_expenditure_by_country">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170,42"
           Id="Package\Insert data to tables\insert csv data_alcohol_expenditure_as_a_per_cent_of_total_household_expenditure_by_country\OLE DB Destination"
@@ -13710,7 +15158,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13733,7 +15183,7 @@
     design-time-name="Package\Insert data to tables\insert csv data_excise_duty_per_hectolitre">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="150,42"
           Id="Package\Insert data to tables\insert csv data_excise_duty_per_hectolitre\Flat File Source"
@@ -13773,7 +15223,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13796,7 +15248,7 @@
     design-time-name="Package\Insert data to tables\insert csv data_recorded_alcohol_per_capita_consumption_from_2010">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170,42"
           Id="Package\Insert data to tables\insert csv data_recorded_alcohol_per_capita_consumption_from_2010\Table AlcoholUsage"
@@ -13836,7 +15288,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13859,7 +15313,7 @@
     design-time-name="Package\Insert data to tables\insert csv health_warning_labels_on_alcohol_advertising">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170,42"
           Id="Package\Insert data to tables\insert csv health_warning_labels_on_alcohol_advertising\OLE DB Destination"
@@ -13899,7 +15353,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13922,7 +15378,7 @@
     design-time-name="Package\Insert data to tables\insert csv legal_BAC_limits_by_country">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="150,42"
           Id="Package\Insert data to tables\insert csv legal_BAC_limits_by_country\Flat File Source"
@@ -13962,7 +15418,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13985,7 +15443,7 @@
     design-time-name="Package\Insert data to tables\insert csv recorded_alcohol_per_capita_consumption_2000_2009">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170,42"
           Id="Package\Insert data to tables\insert csv recorded_alcohol_per_capita_consumption_2000_2009\Table AlcoholUsage"
@@ -14025,7 +15483,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
