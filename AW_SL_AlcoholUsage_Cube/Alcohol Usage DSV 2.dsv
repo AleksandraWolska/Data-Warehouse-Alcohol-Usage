@@ -1,0 +1,319 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="cfdd45ab-6eb7-4db4-a69f-bff3d0d85516" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Alcohol Usage DSV 2</ID>
+  <Name>Alcohol Usage DSV 2</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Alcohol Usage</DataSourceID>
+  <Schema>
+    <xs:schema id="Alcohol_x0020_Usage_x0020_DSV_x0020_2" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Alcohol_x0020_Usage_x0020_DSV_x0020_2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="3a1a160c-bd58-4faf-85b9-b9d1e459a929">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_ALCOHOL_TYPE" msprop:DbTableName="ALCOHOL_TYPE" msprop:FriendlyName="ALCOHOL_TYPE" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="97fd8f65-58ba-41d2-944b-21d5718dd9e1">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="ID" msprop:DbColumnName="ID" msprop:design-time-name="dd7b372f-5362-4e1c-8f54-d2e9cfc98d49" type="xs:int" />
+                  <xs:element name="ALCOHOLTYPE" msprop:FriendlyName="ALCOHOLTYPE" msprop:DbColumnName="ALCOHOLTYPE" msprop:design-time-name="3da89b69-6c44-45e7-9b6c-de0e7ba514e6" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_BAC_GROUP" msprop:DbTableName="BAC_GROUP" msprop:FriendlyName="BAC_GROUP" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="5afdcfa1-0602-46c0-a579-1ff1f8d1c43d">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="BACGROUP" msprop:FriendlyName="BACGROUP" msprop:DbColumnName="BACGROUP" msprop:design-time-name="70202f29-6443-4981-8904-f268ed552534">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DIM_ARRESTS_FOR_PUBLIC_DRINKING" msprop:DbTableName="DIM_ARRESTS_FOR_PUBLIC_DRINKING" msprop:FriendlyName="DIM_ARRESTS_FOR_PUBLIC_DRINKING" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="b617d717-274d-4b95-a87b-dbc170c27b50">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="ID" msprop:DbColumnName="ID" msprop:design-time-name="0559b539-6c15-467f-badc-c6f9ac782209" type="xs:int" />
+                  <xs:element name="YEAR" msprop:FriendlyName="YEAR" msprop:DbColumnName="YEAR" msprop:design-time-name="704ef2a3-bb1b-429f-acba-23a2de9bd863" type="xs:int" minOccurs="0" />
+                  <xs:element name="COUNTRY" msprop:FriendlyName="COUNTRY" msprop:DbColumnName="COUNTRY" msprop:design-time-name="a5681b35-b66f-43bb-ad21-b3be16ff90a6" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ARRESTS" msprop:FriendlyName="ARRESTS" msprop:DbColumnName="ARRESTS" msprop:design-time-name="d90fee25-9b5d-4b2c-9ec2-4b7c9de73300" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DIM_BAC" msprop:DbTableName="DIM_BAC" msprop:FriendlyName="DIM_BAC" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="6a564876-fe3d-4c4c-86a9-c9f27c7e73a1">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="ID" msprop:DbColumnName="ID" msprop:design-time-name="fd2375c7-a3ac-4e3f-9438-4ef11212c6fd" type="xs:int" />
+                  <xs:element name="COUNTRY" msprop:FriendlyName="COUNTRY" msprop:DbColumnName="COUNTRY" msprop:design-time-name="2bbab28d-ddaa-42b3-8281-87e9aee9233e" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="YEAR" msprop:FriendlyName="YEAR" msprop:DbColumnName="YEAR" msprop:design-time-name="3df83b67-a2b4-4881-9ae2-7b367c9c5382" type="xs:int" minOccurs="0" />
+                  <xs:element name="BAC_GROUP" msprop:FriendlyName="BAC_GROUP" msprop:DbColumnName="BAC_GROUP" msprop:design-time-name="c78166f2-a57a-43b0-b780-faf779c26f44" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TOLERANCE" msprop:FriendlyName="TOLERANCE" msprop:DbColumnName="TOLERANCE" msprop:design-time-name="b677a9a6-89b5-4633-b580-7dec7ba4e82f" type="xs:float" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DIM_EXCISE_DUTY" msprop:DbTableName="DIM_EXCISE_DUTY" msprop:FriendlyName="DIM_EXCISE_DUTY" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="911e52ca-dece-4753-9466-76acc3e1ed1c">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="ID" msprop:DbColumnName="ID" msprop:design-time-name="50685696-ce46-4fa8-882d-92a3d3f3da6e" type="xs:int" />
+                  <xs:element name="YEAR" msprop:FriendlyName="YEAR" msprop:DbColumnName="YEAR" msprop:design-time-name="be21c406-29f8-44ea-ac87-a06c9af1090d" type="xs:int" minOccurs="0" />
+                  <xs:element name="COUNTRY" msprop:FriendlyName="COUNTRY" msprop:DbColumnName="COUNTRY" msprop:design-time-name="d3dcd822-a3f5-4918-bdb4-89b878f0e646" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ALCOHOLTYPE" msprop:FriendlyName="ALCOHOLTYPE" msprop:DbColumnName="ALCOHOLTYPE" msprop:design-time-name="d8367d5f-619a-4ce7-9991-3ae41e5080b6" type="xs:int" minOccurs="0" />
+                  <xs:element name="EXPENDITURE" msprop:FriendlyName="EXPENDITURE" msprop:DbColumnName="EXPENDITURE" msprop:design-time-name="5c80fb6d-7f34-4481-b719-17c65db06e58" type="xs:float" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DIM_EXPENDITURE" msprop:DbTableName="DIM_EXPENDITURE" msprop:FriendlyName="DIM_EXPENDITURE" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="cf90fc6f-2cec-490d-b4b1-1f0b29445513">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="ID" msprop:DbColumnName="ID" msprop:design-time-name="d79f119c-76c4-44bd-94fd-75268bdc966f" type="xs:int" />
+                  <xs:element name="YEAR" msprop:FriendlyName="YEAR" msprop:DbColumnName="YEAR" msprop:design-time-name="c23d0fb4-04d1-4eb0-9322-55b97fd8bc73" type="xs:int" minOccurs="0" />
+                  <xs:element name="COUNTRY" msprop:FriendlyName="COUNTRY" msprop:DbColumnName="COUNTRY" msprop:design-time-name="d76b45e5-a5e3-44c8-b02e-3ae47fd33fa5" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="VALUE" msprop:FriendlyName="VALUE" msprop:DbColumnName="VALUE" msprop:design-time-name="1e3b3948-4a05-4e2b-8f4f-c0ce5b303afb" type="xs:float" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DIM_LOCATION" msprop:DbTableName="DIM_LOCATION" msprop:FriendlyName="DIM_LOCATION" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="e48390bf-010d-46bd-873a-9a9a25bce747">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="COUNTRY" msprop:FriendlyName="COUNTRY" msprop:DbColumnName="COUNTRY" msprop:design-time-name="dd382722-91cc-42b1-a74c-c593799a2322">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="REGION" msprop:FriendlyName="REGION" msprop:DbColumnName="REGION" msprop:design-time-name="6a5b951f-ac17-4dc1-802c-a235039ee5ff" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DIM_YEAR" msprop:DbTableName="DIM_YEAR" msprop:FriendlyName="DIM_YEAR" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="77dda9e5-7254-4359-b663-a80ac695702c">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="YEAR" msprop:FriendlyName="YEAR" msprop:DbColumnName="YEAR" msprop:design-time-name="c7dc8aa5-fd7e-4e4e-9375-bad34246ad50" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DIM_YOUTH_DRINKERS" msprop:DbTableName="DIM_YOUTH_DRINKERS" msprop:FriendlyName="DIM_YOUTH_DRINKERS" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="054c1021-94c1-4080-b0ca-64622644270e">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="ID" msprop:DbColumnName="ID" msprop:design-time-name="170586a3-24d5-4a87-bf10-658423c927bd" type="xs:int" />
+                  <xs:element name="COUNTRY" msprop:FriendlyName="COUNTRY" msprop:DbColumnName="COUNTRY" msprop:design-time-name="dd5a9137-b248-4174-96b0-9269f7e724b3" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SEX" msprop:FriendlyName="SEX" msprop:DbColumnName="SEX" msprop:design-time-name="5e11c6e1-85db-4bdf-bd88-f24af468b1d1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DRINKERS" msprop:FriendlyName="DRINKERS" msprop:DbColumnName="DRINKERS" msprop:design-time-name="7465e01c-571e-4a59-b67b-7ab59bc0ee95" type="xs:float" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FACT_ALCOHOL_USAGE" msprop:DbTableName="FACT_ALCOHOL_USAGE" msprop:FriendlyName="FACT_ALCOHOL_USAGE" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="317c4740-6b39-491c-883a-8be3d4d547ee">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="FACT_ALCOHOL_USAGE_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="FACT_ALCOHOL_USAGE_ID" msprop:DbColumnName="FACT_ALCOHOL_USAGE_ID" msprop:design-time-name="13f53045-a2a1-463c-93d0-04038efb165c" type="xs:int" />
+                  <xs:element name="COUNTRY" msprop:FriendlyName="COUNTRY" msprop:DbColumnName="COUNTRY" msprop:design-time-name="f50d435a-7060-47d3-a574-3fb117c9445f" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="YEAR" msprop:FriendlyName="YEAR" msprop:DbColumnName="YEAR" msprop:design-time-name="46202701-ff70-465a-b6ee-b921057649eb" type="xs:int" minOccurs="0" />
+                  <xs:element name="BAC" msprop:FriendlyName="BAC" msprop:DbColumnName="BAC" msprop:design-time-name="a291074a-0401-4923-b0eb-66571594bac4" type="xs:int" minOccurs="0" />
+                  <xs:element name="YOUTH_DRINKERS" msprop:FriendlyName="YOUTH_DRINKERS" msprop:DbColumnName="YOUTH_DRINKERS" msprop:design-time-name="48cbfa94-df87-483b-965f-ff83b280dd40" type="xs:int" minOccurs="0" />
+                  <xs:element name="EXCISET_DUTY" msprop:FriendlyName="EXCISET_DUTY" msprop:DbColumnName="EXCISET_DUTY" msprop:design-time-name="6e5ca72c-bfa8-482d-b597-4b10cf0da577" type="xs:int" minOccurs="0" />
+                  <xs:element name="ARRESR_FOR_PUBLIC_DRINKING" msprop:FriendlyName="ARRESR_FOR_PUBLIC_DRINKING" msprop:DbColumnName="ARRESR_FOR_PUBLIC_DRINKING" msprop:design-time-name="45da08dd-185b-4e5b-8617-4cb6933ec9ec" type="xs:int" minOccurs="0" />
+                  <xs:element name="EXPEDITIURE" msprop:FriendlyName="EXPEDITIURE" msprop:DbColumnName="EXPEDITIURE" msprop:design-time-name="2fe37996-0282-487f-949b-18faa4c367bb" type="xs:int" minOccurs="0" />
+                  <xs:element name="ALCOHOLTYPE" msprop:FriendlyName="ALCOHOLTYPE" msprop:DbColumnName="ALCOHOLTYPE" msprop:design-time-name="21f4f466-b3e9-4819-8a41-9038c9d9464e" type="xs:int" minOccurs="0" />
+                  <xs:element name="CONSUMPTION" msprop:FriendlyName="CONSUMPTION" msprop:DbColumnName="CONSUMPTION" msprop:design-time-name="e88f8d72-ed43-40dd-a9e7-a34b827bff93" type="xs:float" minOccurs="0" />
+                  <xs:element name="RELATED_ROAD_TRAFFICS" msprop:FriendlyName="RELATED_ROAD_TRAFFICS" msprop:DbColumnName="RELATED_ROAD_TRAFFICS" msprop:design-time-name="bb93a690-f322-45a5-b1e2-d5c505cf3e16" type="xs:float" minOccurs="0" />
+                  <xs:element name="NATIONAL_POLICY" msprop:FriendlyName="NATIONAL_POLICY" msprop:DbColumnName="NATIONAL_POLICY" msprop:design-time-name="fa21927a-aaaa-42d1-96b4-d6a2b2adde66" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HEALTH_WARNING" msprop:FriendlyName="HEALTH_WARNING" msprop:DbColumnName="HEALTH_WARNING" msprop:design-time-name="d85e7778-eabf-4597-96e8-99724591c549" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_ALCOHOL_TYPE" />
+          <xs:field xpath="ID" />
+        </xs:unique>
+        <xs:unique name="dbo_BAC_GROUP_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_BAC_GROUP" />
+          <xs:field xpath="BACGROUP" />
+        </xs:unique>
+        <xs:unique name="dbo_DIM_ARRESTS_FOR_PUBLIC_DRINKING_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIM_ARRESTS_FOR_PUBLIC_DRINKING" />
+          <xs:field xpath="ID" />
+        </xs:unique>
+        <xs:unique name="dbo_DIM_BAC_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIM_BAC" />
+          <xs:field xpath="ID" />
+        </xs:unique>
+        <xs:unique name="dbo_DIM_EXCISE_DUTY_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIM_EXCISE_DUTY" />
+          <xs:field xpath="ID" />
+        </xs:unique>
+        <xs:unique name="dbo_DIM_EXPENDITURE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIM_EXPENDITURE" />
+          <xs:field xpath="ID" />
+        </xs:unique>
+        <xs:unique name="dbo_DIM_LOCATION_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIM_LOCATION" />
+          <xs:field xpath="COUNTRY" />
+        </xs:unique>
+        <xs:unique name="dbo_DIM_YEAR_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIM_YEAR" />
+          <xs:field xpath="YEAR" />
+        </xs:unique>
+        <xs:unique name="dbo_DIM_YOUTH_DRINKERS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIM_YOUTH_DRINKERS" />
+          <xs:field xpath="ID" />
+        </xs:unique>
+        <xs:unique name="dbo_FACT_ALCOHOL_USAGE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_FACT_ALCOHOL_USAGE" />
+          <xs:field xpath="FACT_ALCOHOL_USAGE_ID" />
+        </xs:unique>
+        <xs:keyref name="fact_year_fk" refer="dbo_DIM_YEAR_Constraint1">
+          <xs:selector xpath=".//dbo_FACT_ALCOHOL_USAGE" />
+          <xs:field xpath="YEAR" />
+        </xs:keyref>
+        <xs:keyref name="fact_bac_fk" refer="dbo_DIM_BAC_Constraint1">
+          <xs:selector xpath=".//dbo_FACT_ALCOHOL_USAGE" />
+          <xs:field xpath="BAC" />
+        </xs:keyref>
+        <xs:keyref name="fact_country_fk" refer="dbo_DIM_LOCATION_Constraint1">
+          <xs:selector xpath=".//dbo_FACT_ALCOHOL_USAGE" />
+          <xs:field xpath="COUNTRY" />
+        </xs:keyref>
+        <xs:keyref name="fact_duty_fk" refer="dbo_DIM_EXCISE_DUTY_Constraint1">
+          <xs:selector xpath=".//dbo_FACT_ALCOHOL_USAGE" />
+          <xs:field xpath="EXCISET_DUTY" />
+        </xs:keyref>
+        <xs:keyref name="fact_arrests_fk" refer="dbo_DIM_ARRESTS_FOR_PUBLIC_DRINKING_Constraint1">
+          <xs:selector xpath=".//dbo_FACT_ALCOHOL_USAGE" />
+          <xs:field xpath="ARRESR_FOR_PUBLIC_DRINKING" />
+        </xs:keyref>
+        <xs:keyref name="fact_alcoholtype_fk" refer="Constraint1">
+          <xs:selector xpath=".//dbo_FACT_ALCOHOL_USAGE" />
+          <xs:field xpath="ALCOHOLTYPE" />
+        </xs:keyref>
+        <xs:keyref name="fact_expenditure_fk" refer="dbo_DIM_EXPENDITURE_Constraint1">
+          <xs:selector xpath=".//dbo_FACT_ALCOHOL_USAGE" />
+          <xs:field xpath="EXPEDITIURE" />
+        </xs:keyref>
+        <xs:keyref name="fact_youth_fk" refer="dbo_DIM_YOUTH_DRINKERS_Constraint1">
+          <xs:selector xpath=".//dbo_FACT_ALCOHOL_USAGE" />
+          <xs:field xpath="YOUTH_DRINKERS" />
+        </xs:keyref>
+        <xs:keyref name="ded_fk_at" refer="Constraint1">
+          <xs:selector xpath=".//dbo_DIM_EXCISE_DUTY" />
+          <xs:field xpath="ALCOHOLTYPE" />
+        </xs:keyref>
+        <xs:keyref name="dim_bac_bg_fk" refer="dbo_BAC_GROUP_Constraint1">
+          <xs:selector xpath=".//dbo_DIM_BAC" />
+          <xs:field xpath="BAC_GROUP" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Alcohol_x0020_Usage_x0020_DSV_x0020_2 xmlns="" />
+  </Schema>
+</DataSourceView>

@@ -1,0 +1,1389 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9e9bc741-97b5-4ba9-930d-3519f618df2c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Alcohol Usage Cube</ID>
+  <Name>Alcohol Usage Cube</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="42" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-22367" scrolltop="-4677" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="23580" y="24151" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_YEAR" left="1340" top="7080" logicalid="21" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="1228" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000cc040000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DIM_YEAR" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_BAC" left="8900" top="1842" logicalid="22" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="2667" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00006b0a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DIM_BAC" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_EXCISE_DUTY" left="-9741" top="12440" logicalid="23" controlid="3" masterid="0" hint1="0" hint2="0" width="3239" height="2667" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000a70c00006b0a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DIM_EXCISE_DUTY" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_ARRESTS_FOR_PUBLIC_DRINKING" left="-16815" top="6956" logicalid="24" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000003090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DIM_ARRESTS_FOR_PUBLIC_DRINKING" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="BAC_GROUP" left="17403" top="1131" logicalid="25" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="1228" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000cc040000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_BAC_GROUP" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FACT_ALCOHOL_USAGE" left="-5875" top="4925" logicalid="26" controlid="6" masterid="0" hint1="0" hint2="0" width="5821" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000bd16000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_FACT_ALCOHOL_USAGE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_EXPENDITURE" left="-17872" top="2100" logicalid="27" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000003090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DIM_EXPENDITURE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="ALCOHOL_TYPE" left="-2981" top="12599" logicalid="28" controlid="8" masterid="0" hint1="0" hint2="0" width="3239" height="1588" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000a70c000034060000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_ALCOHOL_TYPE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_LOCATION" left="-8461" top="1697" logicalid="29" controlid="9" masterid="0" hint1="0" hint2="0" width="3000" height="1588" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000034060000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DIM_LOCATION" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_YOUTH_DRINKERS" left="-6582" top="-1697" logicalid="30" controlid="10" masterid="0" hint1="0" hint2="0" width="3000" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000003090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DIM_YOUTH_DRINKERS" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="-354" top="5885" logicalid="31" controlid="11" masterid="0" hint1="0" hint2="0" width="1994" height="2195" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_year_fk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Oblique" sourceid="1" destid="6" sourceattachpoint="30" destattachpoint="314" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="1340" y="7680" />
+              <point x="840" y="7680" />
+              <point x="446" y="6185" />
+              <point x="-54" y="6185" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="11600" top="732" logicalid="32" controlid="12" masterid="0" hint1="0" hint2="0" width="6103" height="1410" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[dim_bac_bg_fk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Oblique" sourceid="5" destid="2" sourceattachpoint="0" destattachpoint="135" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="17403" y="1131" />
+              <point x="16903" y="1131" />
+              <point x="12400" y="1842" />
+              <point x="11900" y="1842" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="-354" top="1443" logicalid="33" controlid="13" masterid="0" hint1="0" hint2="0" width="9554" height="5382" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_bac_fk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Oblique" sourceid="2" destid="6" sourceattachpoint="0" destattachpoint="331" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8900" y="1842" />
+              <point x="8400" y="1842" />
+              <point x="446" y="6525" />
+              <point x="-54" y="6525" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="-6802" top="12800" logicalid="34" controlid="14" masterid="0" hint1="0" hint2="0" width="4121" height="1540" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[ded_fk_at]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Oblique" sourceid="8" destid="3" sourceattachpoint="30" destattachpoint="215" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-2981" y="13199" />
+              <point x="-3481" y="13199" />
+              <point x="-6002" y="14040" />
+              <point x="-6502" y="14040" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="-10541" top="6905" logicalid="35" controlid="15" masterid="0" hint1="0" hint2="0" width="4966" height="6535" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_duty_fk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Oblique" sourceid="3" destid="6" sourceattachpoint="30" destattachpoint="114" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-9741" y="13040" />
+              <point x="-10241" y="13040" />
+              <point x="-6375" y="7205" />
+              <point x="-5875" y="7205" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="-17615" top="7157" logicalid="36" controlid="16" masterid="0" hint1="0" hint2="0" width="12040" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_arrests_fk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Oblique" sourceid="4" destid="6" sourceattachpoint="30" destattachpoint="131" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-16815" y="7556" />
+              <point x="-17315" y="7556" />
+              <point x="-6375" y="7545" />
+              <point x="-5875" y="7545" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="-3882" top="-1496" logicalid="37" controlid="17" masterid="0" hint1="0" hint2="0" width="4628" height="8661" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_youth_fk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Oblique" sourceid="10" destid="6" sourceattachpoint="147" destattachpoint="348" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-3582" y="-1097" />
+              <point x="-3082" y="-1097" />
+              <point x="446" y="6865" />
+              <point x="-54" y="6865" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="-15172" top="2301" logicalid="38" controlid="18" masterid="0" hint1="0" hint2="0" width="9597" height="5884" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_expenditure_fk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Oblique" sourceid="7" destid="6" sourceattachpoint="147" destattachpoint="148" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-14872" y="2700" />
+              <point x="-14372" y="2700" />
+              <point x="-6375" y="7885" />
+              <point x="-5875" y="7885" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="-354" top="7925" logicalid="39" controlid="19" masterid="0" hint1="0" hint2="0" width="1412" height="5674" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_alcoholtype_fk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Oblique" sourceid="8" destid="6" sourceattachpoint="111" destattachpoint="416" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="258" y="13199" />
+              <point x="758" y="13199" />
+              <point x="446" y="8225" />
+              <point x="-54" y="8225" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="-6675" top="1898" logicalid="40" controlid="20" masterid="0" hint1="0" hint2="0" width="2014" height="4267" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_country_fk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Oblique" sourceid="9" destid="6" sourceattachpoint="111" destattachpoint="47" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-5461" y="2297" />
+              <point x="-4961" y="2297" />
+              <point x="-6375" y="5865" />
+              <point x="-5875" y="5865" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-22367</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4677</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-17872</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-1697</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="6bf6bda2-3666-45fc-b444-67f2785e89d6">
+      <ID>ALCOHOL TYPE</ID>
+      <Name>ALCOHOL TYPE</Name>
+      <DimensionID>ALCOHOL TYPE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="f2f03ed3-9c19-402a-9e3d-1c6081471288">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2c9f6bc5-9c04-4fc5-a00e-fdd7479cb1d5">
+          <AttributeID>ALCOHOLTYPE</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d1355462-9d2b-44a0-9a86-f4bbefd4edb8">
+      <ID>BAC GROUP</ID>
+      <Name>BAC GROUP</Name>
+      <DimensionID>BAC GROUP</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b20cfe81-43ec-4e3a-a1a9-47b6fed2ff02">
+          <AttributeID>BACGROUP</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ed849645-eb27-43f8-a1d1-e28e9d316d15">
+      <ID>DIM ARRESTS FOR PUBLIC DRINKING</ID>
+      <Name>DIM ARRESTS FOR PUBLIC DRINKING</Name>
+      <DimensionID>DIM ARRESTS FOR PUBLIC DRINKING</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="cc182461-aa7c-4966-9da6-d68b704da756">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="1bf4e54e-e1c0-439e-8fee-e543030f96df">
+      <ID>DIM BAC</ID>
+      <Name>DIM BAC</Name>
+      <DimensionID>DIM BAC</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="60878ccc-c36f-4ced-a605-1131c69c3edd">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a41c7090-33f0-4146-bdf1-ce9c30547557">
+          <AttributeID>BAC GROUP</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="51417374-8167-4be2-b792-ac1be0fb7581">
+      <ID>DIM EXCISE DUTY</ID>
+      <Name>DIM EXCISE DUTY</Name>
+      <DimensionID>DIM EXCISE DUTY</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="24c707cb-3390-44dc-9d11-aef78e359e30">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a63cb2f4-83b6-4893-92a2-c091a5f419e6">
+          <AttributeID>ALCOHOLTYPE</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="2e313aa8-0dfb-4457-8eea-018e072ead85">
+      <ID>ALCOHOLTYPE</ID>
+      <Name>ALCOHOLTYPE</Name>
+      <DimensionID>ALCOHOL TYPE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="15464f60-678d-41b8-b32f-6ffdb4b5fc1b">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="315453a1-ef69-4dd4-a1f4-3fe1d423ed6f">
+          <AttributeID>ALCOHOLTYPE</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="1a49f2ac-dcd8-4636-ac65-8aaacd5334f8">
+      <ID>DIM EXPENDITURE</ID>
+      <Name>DIM EXPENDITURE</Name>
+      <DimensionID>DIM EXPENDITURE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b8f994ce-df71-4dfb-84b0-d515f06be15d">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="4ebe4aa0-a142-448b-ba92-d65e4322dcfd">
+      <ID>DIM LOCATION</ID>
+      <Name>DIM LOCATION</Name>
+      <DimensionID>DIM LOCATION</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="59861640-36cb-4fab-b45b-812222830056">
+          <AttributeID>COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="07584f29-0ef5-43c7-aeac-8107b10f16a6">
+          <AttributeID>REGION</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="ed4311eb-7496-4b0c-b702-09bdb6aea1d7">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="ddeaf550-b87e-44a7-a1f3-c0c6d20a6959">
+      <ID>DIM YEAR</ID>
+      <Name>DIM YEAR</Name>
+      <DimensionID>DIM YEAR</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a9c0620a-6e3f-4933-97f3-4f1c057fceb8">
+          <AttributeID>YEAR</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="8b778830-aabd-4f03-8585-b81d100608a5">
+      <ID>DIM YOUTH DRINKERS</ID>
+      <Name>DIM YOUTH DRINKERS</Name>
+      <DimensionID>DIM YOUTH DRINKERS</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="df079f6e-cfd9-4c1c-91c5-fed043bd27a9">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="e1e3e038-d2b3-46ae-a794-66550a8dc74c">
+      <ID>FACT ALCOHOL USAGE</ID>
+      <Name>FACT ALCOHOL USAGE</Name>
+      <DimensionID>FACT ALCOHOL USAGE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="3d1d3762-a3aa-4e2e-8c73-391ee7dd8326">
+          <AttributeID>FACT ALCOHOL USAGE ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6790d802-cf03-44c6-b5fc-a74764846c82">
+          <AttributeID>YOUTH DRINKERS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="505580b3-3572-4360-aa9d-f784a36243e7">
+          <AttributeID>EXPEDITIURE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7760c940-900c-4f3b-9ffa-834e26788c26">
+          <AttributeID>ALCOHOLTYPE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f3271940-cfb2-47bc-ae73-f4c07c63199c">
+          <AttributeID>ARRESR FOR PUBLIC DRINKING</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="01df3d56-5190-4192-9941-5bbb0d0b2b66">
+          <AttributeID>EXCISET DUTY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d27f4d1a-56e1-469c-9594-1fe3841371d2">
+          <AttributeID>COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="37be7c96-9a8b-4315-9102-be3552aaa408">
+          <AttributeID>BAC</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="15f9687b-ec1d-4dfb-9664-4306117c49f4">
+          <AttributeID>YEAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e6c5ee1e-34a4-4b96-8e2e-2e0b08c84eaf">
+          <AttributeID>NATIONAL POLICY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="68335341-cbbe-4642-af9f-cb6f2f64da4f">
+          <AttributeID>HEALTH WARNING</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="23132d92-c612-4cd3-af8c-6c5a9c5a605d">
+      <ID>EXCISET DUTY - ALCOHOLTYPE</ID>
+      <Name>EXCISET DUTY - ALCOHOLTYPE</Name>
+      <DimensionID>ALCOHOL TYPE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="4437f4dd-e5b7-4e89-b429-205446a726ed">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b03a8562-af19-4704-90b9-592cde0f4a6c">
+          <AttributeID>ALCOHOLTYPE</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="d2b08c80-d7c8-4371-bd4e-3502f2aa1211">
+      <ID>ALCOHOL TYPE</ID>
+      <Name>ALCOHOL TYPE</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="efb86ce9-d071-4771-a853-ce86aaf04d64">
+          <ID>ALCOHOL TYPE Count</ID>
+          <Name>ALCOHOL TYPE Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="1554bfc8-75d7-4f6d-b1d1-743a4a563295">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="abb78198-2c01-4b6a-9a9c-52f3945d5a9a">
+              <TableID>dbo_ALCOHOL_TYPE</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="7a390dc7-3aec-4bbf-b528-1008ec29f382">
+          <CubeDimensionID>ALCOHOL TYPE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4b84e482-27e4-4278-8214-e124a211d66e">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="60242bdc-9d55-4866-a6d9-47eb31ef6647">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4d0ce27c-c4e2-425b-9276-936856622692">
+                    <TableID>dbo_ALCOHOL_TYPE</TableID>
+                    <ColumnID>ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="d39dab39-7e8c-4677-a0f5-c73be6c38539">
+          <CubeDimensionID>ALCOHOLTYPE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3c2f64d3-e2f4-49cd-8a30-04285e16dc92">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="006baa0b-714e-4864-97ee-63d87fc33261">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a8200973-ab62-435f-8d14-b3f3f1ce6ea8">
+                    <TableID>dbo_ALCOHOL_TYPE</TableID>
+                    <ColumnID>ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="47e5ade5-ae38-4cd9-bc16-41f18afb3099">
+          <CubeDimensionID>EXCISET DUTY - ALCOHOLTYPE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="40fa1236-c60a-4f5b-8680-98b5f1f00589">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="47c97570-807d-4578-a2b7-33a545e06129">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="14944c5c-e6cf-4f7e-879d-e4f894648f4e">
+                    <TableID>dbo_ALCOHOL_TYPE</TableID>
+                    <ColumnID>ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="f2a737d0-efca-44d0-9284-a4ac26c813e8">
+      <ID>BAC GROUP</ID>
+      <Name>BAC GROUP</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="f34ea535-2d4c-466f-b053-9f76527e781a">
+          <ID>BAC GROUP Count</ID>
+          <Name>BAC GROUP Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="d9bb4237-3d5a-4204-a00c-b4909384cb93">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="a5e9001c-5bc6-471f-b1f5-eaa8052d9088">
+              <TableID>dbo_BAC_GROUP</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="5f8d2a73-67d7-4939-b43b-a5e6bc652afd">
+          <CubeDimensionID>BAC GROUP</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="df7b9a86-9853-4ad8-98b4-8be2c1aa403e">
+              <AttributeID>BACGROUP</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7c6d2e02-4187-4a09-a78a-3fea9e7054d9">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7d68507d-8763-4e03-a6bf-d97e4c0aa469">
+                    <TableID>dbo_BAC_GROUP</TableID>
+                    <ColumnID>BACGROUP</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="32995b83-dc1b-4ab9-8ba4-b54195215913">
+      <ID>DIM ARRESTS FOR PUBLIC DRINKING</ID>
+      <Name>DIM ARRESTS FOR PUBLIC DRINKING</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="a28a0c46-5b3c-449c-aa06-d210f87a10e6">
+          <ID>YEAR</ID>
+          <Name>YEAR</Name>
+          <Source dwd:design-time-name="220da903-4234-4329-b51e-8f8b624a1c5a">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="78f8d1d5-3c5d-4b04-8aa5-e7d7f5675fbd">
+              <TableID>dbo_DIM_ARRESTS_FOR_PUBLIC_DRINKING</TableID>
+              <ColumnID>YEAR</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="151b7cad-bfb8-4994-bdcc-c301bd4e27ba">
+          <ID>ARRESTS</ID>
+          <Name>ARRESTS</Name>
+          <Source dwd:design-time-name="b3a754f5-656e-41c8-a356-d819265dec93">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e3302c25-4c18-4ac0-a2f2-59404bf91e7b">
+              <TableID>dbo_DIM_ARRESTS_FOR_PUBLIC_DRINKING</TableID>
+              <ColumnID>ARRESTS</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9da7bf99-2751-4872-913f-1cec2b89fc76">
+          <ID>DIM ARRESTS FOR PUBLIC DRINKING Count</ID>
+          <Name>DIM ARRESTS FOR PUBLIC DRINKING Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="462bbf7a-9f38-4c75-90a3-63176afff3f1">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="51321650-3502-42ce-b98b-e28a23516ef6">
+              <TableID>dbo_DIM_ARRESTS_FOR_PUBLIC_DRINKING</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="df12a6d9-5fe1-490c-a111-25cc14cfaa2a">
+          <CubeDimensionID>DIM ARRESTS FOR PUBLIC DRINKING</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f2677e65-b46f-4279-a3e3-c1937ad5b4aa">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="415d9c6e-e229-4f0d-b925-c5a78b9f5355">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="45770ef2-2e45-4870-b97d-4bf2dfe2d1e1">
+                    <TableID>dbo_DIM_ARRESTS_FOR_PUBLIC_DRINKING</TableID>
+                    <ColumnID>ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="b07210d2-8821-4655-ad08-c0ed6ac071b8">
+      <ID>DIM BAC</ID>
+      <Name>DIM BAC</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="7ee4bdd8-07b4-49a7-a47a-d3f319317079">
+          <ID>YEAR - DIM BAC</ID>
+          <Name>YEAR - DIM BAC</Name>
+          <Source dwd:design-time-name="437af527-4671-400b-85db-c5b637d3d52d">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="27b60383-68ea-4bd2-a410-affa6db3dc09">
+              <TableID>dbo_DIM_BAC</TableID>
+              <ColumnID>YEAR</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="28893704-caa7-479c-b39e-a82db9315cea">
+          <ID>TOLERANCE</ID>
+          <Name>TOLERANCE</Name>
+          <Source dwd:design-time-name="f279ecbc-b924-45aa-9ab2-e1b7169e97aa">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0ef61463-d19e-455e-8934-8e00301dda19">
+              <TableID>dbo_DIM_BAC</TableID>
+              <ColumnID>TOLERANCE</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="247bb3c0-1a9c-4a10-92b2-9cb4b8542465">
+          <ID>DIM BAC Count</ID>
+          <Name>DIM BAC Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="cada307a-bd8d-407a-a2ce-15733dae9bf2">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="4b6fcfd4-7e5a-43f9-926f-af5783d2dfe0">
+              <TableID>dbo_DIM_BAC</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="c86c13a8-5d7e-49f3-bc37-c1844198be79">
+          <CubeDimensionID>DIM BAC</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c1bf7225-7951-48bb-8e07-4de6d2148462">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="28959420-5d07-4824-8418-ba87680e602f">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="85b84c7e-7277-46d9-82b7-e4140dc8ec98">
+                    <TableID>dbo_DIM_BAC</TableID>
+                    <ColumnID>ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="eac43390-356a-4050-911d-d8094a1b650b">
+          <CubeDimensionID>BAC GROUP</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7f4837a3-e1ef-4d77-95a7-a8394e9172dc">
+              <AttributeID>BACGROUP</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4555cb0a-91f9-4a25-92ac-cbcb112655d6">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ea6eaf17-b63b-4113-9c6b-1d133838f97e">
+                    <TableID>dbo_DIM_BAC</TableID>
+                    <ColumnID>BAC_GROUP</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="4d18659f-0b14-4697-b0e2-b20af49e18ce">
+      <ID>DIM EXCISE DUTY</ID>
+      <Name>DIM EXCISE DUTY</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="2ec860a2-1091-408e-9632-97f52a2fa711">
+          <ID>YEAR - DIM EXCISE DUTY</ID>
+          <Name>YEAR - DIM EXCISE DUTY</Name>
+          <Source dwd:design-time-name="fd4c7bf0-0322-4453-9404-542ce74de7da">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3d920aa7-6c20-4d08-b25a-9c2e800e4c2a">
+              <TableID>dbo_DIM_EXCISE_DUTY</TableID>
+              <ColumnID>YEAR</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="742324e3-3960-457a-b89c-fe9aa51085cc">
+          <ID>EXPENDITURE</ID>
+          <Name>EXPENDITURE</Name>
+          <Source dwd:design-time-name="b0ec732d-2824-4675-9c9a-1bafc4576765">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="586dbea8-114d-41d4-ae35-f369e002b0e8">
+              <TableID>dbo_DIM_EXCISE_DUTY</TableID>
+              <ColumnID>EXPENDITURE</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="cec90130-003e-40bb-a900-f0b206e12545">
+          <ID>DIM EXCISE DUTY Count</ID>
+          <Name>DIM EXCISE DUTY Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="5d22a510-1ca1-44b0-a7e5-b102e0b34e6b">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="0fac6a3f-dd93-4e0f-8ec8-b8ab6ca2bca3">
+              <TableID>dbo_DIM_EXCISE_DUTY</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="d5a6ce78-33eb-441e-a594-6fb24cd87a87">
+          <CubeDimensionID>DIM EXCISE DUTY</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8ac065bc-cfaf-4a51-bd63-8ad3e6a6d692">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="91e6baf6-def0-4e04-ae44-49571bd4aea1">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c026fde8-d052-4a6e-9a9c-dc6e9af9d79f">
+                    <TableID>dbo_DIM_EXCISE_DUTY</TableID>
+                    <ColumnID>ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="63b19ac3-778d-40c5-8448-9215f162a65a">
+          <CubeDimensionID>ALCOHOLTYPE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ded76e62-b1d7-42df-ac2f-9dceba9c64af">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3d439e26-4431-4f60-8c88-024b897751bb">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="85ac9288-9d7b-4d45-9fbd-e9494bd551f4">
+                    <TableID>dbo_DIM_EXCISE_DUTY</TableID>
+                    <ColumnID>ALCOHOLTYPE</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="724a2e48-91db-4e01-92c7-601be9a8cb2c">
+      <ID>DIM EXPENDITURE</ID>
+      <Name>DIM EXPENDITURE</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="72c04514-16a3-4be8-b930-8a12faa3cf3e">
+          <ID>YEAR - DIM EXPENDITURE</ID>
+          <Name>YEAR - DIM EXPENDITURE</Name>
+          <Source dwd:design-time-name="ea78db79-9b72-4d16-9119-389f8a0e0698">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3589148f-5130-472b-8648-ee975c2bf6ba">
+              <TableID>dbo_DIM_EXPENDITURE</TableID>
+              <ColumnID>YEAR</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="4e54d39a-3aae-48fe-955f-def4befeaa53">
+          <ID>VALUE</ID>
+          <Name>VALUE</Name>
+          <Source dwd:design-time-name="f7529637-d41f-4e44-8013-5716a937f50d">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2ea94d8e-c670-4787-a00c-0534e059aeeb">
+              <TableID>dbo_DIM_EXPENDITURE</TableID>
+              <ColumnID>VALUE</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ba059fcb-84af-4703-ab13-39304e4305ad">
+          <ID>DIM EXPENDITURE Count</ID>
+          <Name>DIM EXPENDITURE Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="8ce08798-0499-4375-982b-f32a6c7d0cd1">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="c2ccf3fe-d011-41cc-b360-63f95d241098">
+              <TableID>dbo_DIM_EXPENDITURE</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="60c40cb5-1a05-4bc7-840e-3dbff742f8b8">
+          <CubeDimensionID>DIM EXPENDITURE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2f3517ce-103c-4a14-90d9-e8d9ae838610">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="02fbb345-67ee-4c39-8041-9bb46c587022">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1d5c4bc7-7290-4368-bef9-0879b62ed08b">
+                    <TableID>dbo_DIM_EXPENDITURE</TableID>
+                    <ColumnID>ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="c7c3d014-d55a-4afa-aac8-688205dc727b">
+      <ID>DIM LOCATION</ID>
+      <Name>DIM LOCATION</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="4bf2100f-0170-4291-bdf0-73057ff02cd7">
+          <ID>DIM LOCATION Count</ID>
+          <Name>DIM LOCATION Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="47495145-0fd8-472c-bcda-cee13b68065d">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="7f0545f7-3d03-4a34-9469-47d7b87d9472">
+              <TableID>dbo_DIM_LOCATION</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="e21a7469-5d2a-49ad-aa86-d9a6094da76d">
+          <CubeDimensionID>DIM LOCATION</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="be72861e-6ee2-4750-8338-4c861c5e524b">
+              <AttributeID>COUNTRY</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e076bb88-0dee-4766-adf6-985cc78d7306">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9904dfc5-fc99-4dab-a5d7-5782e0b28b99">
+                    <TableID>dbo_DIM_LOCATION</TableID>
+                    <ColumnID>COUNTRY</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="5a697a44-37ca-40a6-8d5d-81a5c7541687">
+      <ID>DIM YEAR</ID>
+      <Name>DIM YEAR</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="18fc37a1-2b4c-4c9d-83a1-98587301e77d">
+          <ID>DIM YEAR Count</ID>
+          <Name>DIM YEAR Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="7315b36f-51d3-470a-b3e5-82bfe5d1122b">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="2d974715-1b85-4dc5-bcb6-205b2e1bb423">
+              <TableID>dbo_DIM_YEAR</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="85d1456c-82e4-4da2-b1e7-719fed5d3071">
+          <CubeDimensionID>DIM YEAR</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="00bde6c9-54eb-47ab-8904-e81f255121b0">
+              <AttributeID>YEAR</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="13dd4810-d76a-480d-8f0b-8958a295f016">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="386f8bb8-cef4-42e1-9f4d-d535b98602c6">
+                    <TableID>dbo_DIM_YEAR</TableID>
+                    <ColumnID>YEAR</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="c7749d6e-2109-4762-92f6-1a38bb414b7c">
+      <ID>DIM YOUTH DRINKERS</ID>
+      <Name>DIM YOUTH DRINKERS</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="1bfe2b67-ce10-4248-86d8-0830153d0392">
+          <ID>DRINKERS</ID>
+          <Name>DRINKERS</Name>
+          <Source dwd:design-time-name="47d46845-5c66-4373-ae75-daccc6c8cdf8">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="352fd587-ad6f-40ae-abf6-fbf62c8a55bc">
+              <TableID>dbo_DIM_YOUTH_DRINKERS</TableID>
+              <ColumnID>DRINKERS</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1c1fc9e4-4216-4bd8-94d7-05ed706662ab">
+          <ID>DIM YOUTH DRINKERS Count</ID>
+          <Name>DIM YOUTH DRINKERS Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="6f81f6f1-2a85-4ae7-9290-71c879371d84">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="12d8697b-3ae1-484d-98ca-5ebfa520f197">
+              <TableID>dbo_DIM_YOUTH_DRINKERS</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="a8bdb987-7cfd-4ffe-864e-c7d8f35f5f34">
+          <CubeDimensionID>DIM YOUTH DRINKERS</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3122b259-8da3-4a46-8d5d-bf53446912b4">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fdd785e8-d136-439e-a45a-6cf47cbcd4bb">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4adae95b-2360-4a74-acc8-baf255850979">
+                    <TableID>dbo_DIM_YOUTH_DRINKERS</TableID>
+                    <ColumnID>ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="a42e4aca-93f9-4181-873d-a5c9834824d9">
+      <ID>FACT ALCOHOL USAGE</ID>
+      <Name>FACT ALCOHOL USAGE</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="df0fc493-a58a-40df-ae68-e9c3c52dceaf">
+          <ID>CONSUMPTION</ID>
+          <Name>CONSUMPTION</Name>
+          <Source dwd:design-time-name="111c6577-dc4e-4cdf-ab48-1a0cedb03ab9">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d1c2bbc7-77d8-42fe-9443-94bdcb77c288">
+              <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+              <ColumnID>CONSUMPTION</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="14a153f9-1e59-4cdd-899c-96f21c0ecd6f">
+          <ID>RELATED ROAD TRAFFICS</ID>
+          <Name>RELATED ROAD TRAFFICS</Name>
+          <Source dwd:design-time-name="9b1d9917-a2d1-4318-9e70-432836e955cf">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="05fcd065-8153-4c74-a127-c783e6a0021d">
+              <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+              <ColumnID>RELATED_ROAD_TRAFFICS</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e6bd0e26-8a91-4419-8e00-e8b541282e7d">
+          <ID>FACT ALCOHOL USAGE Count</ID>
+          <Name>FACT ALCOHOL USAGE Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="af6bb3c5-79df-4d68-98a5-0f133f10e064">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="d5c1fb6f-5f55-4739-b918-727c01f6d36c">
+              <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9a6943c1-88f8-4991-b23c-905ac6dfa908">
+          <ID>NATIONAL POLICY</ID>
+          <Name>NATIONAL POLICY</Name>
+          <AggregateFunction>None</AggregateFunction>
+          <Source dwd:design-time-name="156e7dca-0d36-4288-9303-a8a81c15af0f">
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1f608cb8-7f12-4b89-a95a-4fa897a76bd6">
+              <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+              <ColumnID>NATIONAL_POLICY</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="a8203db3-8bf7-4592-b38d-0d102d4cdd16">
+          <CubeDimensionID>FACT ALCOHOL USAGE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="653d48c4-7f6b-449f-a32b-04d4df281281">
+              <AttributeID>FACT ALCOHOL USAGE ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0826e06b-29c9-4448-9428-ead5c34c84cb">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="dbfa2387-21a6-4b95-b5d3-1196c06a7901">
+                    <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+                    <ColumnID>FACT_ALCOHOL_USAGE_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6b8e674a-d638-47b3-9b2e-a68f54bf4599">
+          <CubeDimensionID>DIM YOUTH DRINKERS</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0d7f63a8-af1f-4442-865b-fc0f6d0bbbba">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1921ecc7-8319-4b46-a697-732a93f7cf3a">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a233797c-183c-4960-9f65-520c55fb69b6">
+                    <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+                    <ColumnID>YOUTH_DRINKERS</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e4666f6e-7c2f-43ab-abd2-9b1be4f16579">
+          <CubeDimensionID>DIM EXPENDITURE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9d9d315a-069f-43f2-a736-fe07664e1377">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1bf32fe9-7570-4c60-a2f8-a76c720dfd88">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8d6552bc-cf7d-4108-98f4-7cc3c7df96ef">
+                    <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+                    <ColumnID>EXPEDITIURE</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2a0edaa9-d905-467a-9100-9d4c71acc638">
+          <CubeDimensionID>ALCOHOLTYPE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="314c20f6-0a47-4b95-b097-6ab0f44d6779">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9806a529-7b22-40e9-b06d-80b482aa5f63">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a8d1864a-6a5d-4a56-be2f-28d2a234c657">
+                    <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+                    <ColumnID>ALCOHOLTYPE</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="518eb7c3-76aa-404e-a435-9c3234d23399">
+          <CubeDimensionID>DIM ARRESTS FOR PUBLIC DRINKING</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4779f2bb-414c-440b-a1c1-89754a4e5cfa">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8e03b211-7d07-4900-a30e-433e5724be8b">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="61104d4f-5cb7-44ff-a2a0-d2c5ff158041">
+                    <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+                    <ColumnID>ARRESR_FOR_PUBLIC_DRINKING</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8c18afa2-e2cf-417b-9c19-bfee483c117d">
+          <CubeDimensionID>DIM EXCISE DUTY</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8ac46b69-2868-4da4-b0a3-f1827c9a1fa9">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e83c1012-90d6-4c5a-9b35-7cb3064c8558">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e88ce5d2-87f4-4abc-a315-e4d4a061c0fd">
+                    <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+                    <ColumnID>EXCISET_DUTY</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="03eb2033-3e47-4faa-8326-23a6c5d975fa">
+          <CubeDimensionID>DIM LOCATION</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="81150678-6603-436b-9176-be4cb0f64d80">
+              <AttributeID>COUNTRY</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="72745740-55e8-4883-b675-d56ff8e1fdc7">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="05af7aaf-6976-4a13-b644-fb1dc6854cc3">
+                    <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+                    <ColumnID>COUNTRY</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="708e449e-9ad5-4414-a8bf-af74553e8250">
+          <CubeDimensionID>DIM BAC</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1de35c03-ac33-4019-968f-762fcdddb49a">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b223a4a8-e72c-4d3c-bcb7-243af1beaead">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="88639ce1-9531-4227-a0f0-feba6541eb6d">
+                    <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+                    <ColumnID>BAC</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="608a5894-f373-424d-a27f-71ee706d38a3">
+          <CubeDimensionID>DIM YEAR</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a05232d8-e83d-46a2-9dd4-f9e4ce3327df">
+              <AttributeID>YEAR</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="472f8b81-e9ca-4aa7-b546-50193fa876b6">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="17939041-6ad8-4196-b548-567fba332fa0">
+                    <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+                    <ColumnID>YEAR</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="11faa5f1-ad29-4a9e-a0f1-b3225ce282d0">
+          <CubeDimensionID>EXCISET DUTY - ALCOHOLTYPE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="128c3451-e577-4a60-81dc-04fa167c77b5">
+              <AttributeID>ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>DIM EXCISE DUTY</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>ALCOHOLTYPE</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="047bcb45-c928-4cb0-936c-15ed99032564">
+          <CubeDimensionID>BAC GROUP</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4f3feda3-a64f-4737-a615-e2423c9ea732">
+              <AttributeID>BACGROUP</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>DIM BAC</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>BAC GROUP</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="6c4d886e-5b19-4a26-a484-9d8bd261acdb">
+    <DataSourceViewID>Alcohol Usage DSV</DataSourceViewID>
+  </Source>
+</Cube>

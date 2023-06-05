@@ -1,0 +1,330 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="615e4813-5ad1-46a8-94a8-b2b1fce765f1" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>FACT ALCOHOL USAGE</ID>
+  <Name>FACT ALCOHOL USAGE</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2097" scrolltop="-9575" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10054" y="24151" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FACT_ALCOHOL_USAGE" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="5821" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000bd16000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_FACT_ALCOHOL_USAGE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2097</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-9575</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8449ccf8-615e-4640-ab76-d7ed456ead0e">
+    <DataSourceViewID>Alcohol Usage DSV 2</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="68d80664-ed7f-4c72-be10-9d0912221f5f">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="b00d5991-5d46-44f1-aef6-30e1ade20209">
+      <ID>FACT ALCOHOL USAGE ID</ID>
+      <Name>FACT ALCOHOL USAGE ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ade4f301-374a-437c-9138-af158103ddd1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5b1a8f80-d7bf-4526-8924-61b01c34c6ce">
+            <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+            <ColumnID>FACT_ALCOHOL_USAGE_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="36d63fbc-8052-470e-b06d-5acda8869365">
+          <AttributeID>YOUTH DRINKERS</AttributeID>
+          <Name>YOUTH DRINKERS</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b7911524-03a0-481e-8805-068272425c6d">
+          <AttributeID>EXPEDITIURE</AttributeID>
+          <Name>EXPEDITIURE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1faf0905-12e8-4fba-b6d4-d9fd3c176b1f">
+          <AttributeID>ALCOHOLTYPE</AttributeID>
+          <Name>ALCOHOLTYPE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="30f9e4d7-cf30-4e23-99b3-a74202fb3e58">
+          <AttributeID>ARRESR FOR PUBLIC DRINKING</AttributeID>
+          <Name>ARRESR FOR PUBLIC DRINKING</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="63f3c924-d6d8-4104-aaac-10a67f4a28f1">
+          <AttributeID>EXCISET DUTY</AttributeID>
+          <Name>EXCISET DUTY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4a852460-fdfb-4e0f-abf6-d8317a534496">
+          <AttributeID>COUNTRY</AttributeID>
+          <Name>COUNTRY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="96f93270-8a75-4fbf-a7b0-fa26f0fa7fac">
+          <AttributeID>BAC</AttributeID>
+          <Name>BAC</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e8af60d6-b2f3-4b54-9d98-2959beac9b49">
+          <AttributeID>YEAR</AttributeID>
+          <Name>YEAR</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c6798814-a2f8-47ae-9ab6-7cccbefc6178">
+          <AttributeID>RELATED ROAD TRAFFICS</AttributeID>
+          <Name>RELATED ROAD TRAFFICS</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d30fdd6e-e2c3-4859-8d57-934a5e58e27c">
+          <AttributeID>NATIONAL POLICY</AttributeID>
+          <Name>NATIONAL POLICY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="46e3c909-4243-4aa2-90ba-2d4094c9a4a3">
+          <AttributeID>HEALTH WARNING</AttributeID>
+          <Name>HEALTH WARNING</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6a71cb3c-baeb-4ff2-b7b9-be57396d2479">
+      <ID>YOUTH DRINKERS</ID>
+      <Name>YOUTH DRINKERS</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d23a5aec-f5e3-4a08-9d35-c6a226a8c103">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c02a0439-c6c4-4ebd-a773-7af42e89ca20">
+            <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+            <ColumnID>YOUTH_DRINKERS</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e516a505-db15-43d4-bdbf-84b5a1933798">
+      <ID>EXPEDITIURE</ID>
+      <Name>EXPEDITIURE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fb39a4e6-449b-486a-9e9d-0796a3165823">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b3ffba07-02a2-409d-8bd6-2a384275b635">
+            <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+            <ColumnID>EXPEDITIURE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e45cc08f-8c64-4472-a0f6-9ef4c1ae2bfc">
+      <ID>ALCOHOLTYPE</ID>
+      <Name>ALCOHOLTYPE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8f96449c-f634-4113-8574-6af216629eb1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="27251947-a4a3-48e2-bbef-38a5df642282">
+            <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+            <ColumnID>ALCOHOLTYPE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f7427eb8-4305-4fba-9d4d-e85128a7ec3d">
+      <ID>ARRESR FOR PUBLIC DRINKING</ID>
+      <Name>ARRESR FOR PUBLIC DRINKING</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ee064701-ccfc-4c29-8c38-529cc9a3f2eb">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f2ff80e0-0a7a-4c8e-b20c-e93d781d04eb">
+            <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+            <ColumnID>ARRESR_FOR_PUBLIC_DRINKING</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4fbd97a3-2dcf-4235-9833-887616564dfe">
+      <ID>EXCISET DUTY</ID>
+      <Name>EXCISET DUTY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="06523e25-24c7-4c9b-a530-5d682a117084">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="63aeea70-0eb9-4645-bcc3-279a48145231">
+            <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+            <ColumnID>EXCISET_DUTY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2e5e1e6c-bbec-47aa-bc76-69db99e7adc1">
+      <ID>COUNTRY</ID>
+      <Name>COUNTRY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7c89cf79-e444-4b36-b469-ad1ab7197d8b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="48852746-7a4d-4ac2-bef0-1e218d39f37f">
+            <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+            <ColumnID>COUNTRY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a0de2547-f8f4-478c-a343-99dbc1423d20">
+      <ID>BAC</ID>
+      <Name>BAC</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d91d6026-e9a3-430e-a0d7-6f3795cfcd79">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0c8bf367-ba1c-4a4e-bcc5-af67f1f1d6ba">
+            <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+            <ColumnID>BAC</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cf8c95d0-3f20-463a-bee1-04658223b1ff">
+      <ID>YEAR</ID>
+      <Name>YEAR</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e8a8bb16-039d-48b3-99d8-938ac167c164">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d4b00958-e7e6-4251-a62b-8206d938b416">
+            <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+            <ColumnID>YEAR</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="58cbb048-91eb-47bd-bca5-a0ce2146ca49">
+      <ID>RELATED ROAD TRAFFICS</ID>
+      <Name>RELATED ROAD TRAFFICS</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9a2ba3d2-8c80-4d76-b308-75eeb3fb2700">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c83c7f4e-ad18-4614-995a-30e90eb6a524">
+            <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+            <ColumnID>RELATED_ROAD_TRAFFICS</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1cf3056d-9ed6-48f2-8079-55da6d08db87">
+      <ID>NATIONAL POLICY</ID>
+      <Name>NATIONAL POLICY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0e2409c9-f9a5-4a89-a20b-c87d6413d7d0">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="62c214b5-16f6-4f5c-8c77-c4cc0cef1eab">
+            <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+            <ColumnID>NATIONAL_POLICY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="aa1de38c-79b0-49ae-8a48-f5516f9b9972">
+      <ID>HEALTH WARNING</ID>
+      <Name>HEALTH WARNING</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="21850e4d-1522-4266-a493-5f50f1b7f8e3">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9886c09f-4e6d-4dab-a17e-2f534b1798f0">
+            <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+            <ColumnID>HEALTH_WARNING</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

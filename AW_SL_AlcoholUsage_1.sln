@@ -7,6 +7,10 @@ Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "AW_SL_AlcoholUsage_1", "AW_
 EndProject
 Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "AW_SL_AlcoholUsage_Cube", "AW_SL_AlcoholUsage_Cube\AW_SL_AlcoholUsage_Cube.dwproj", "{2E500E26-3B89-4D5A-A6B6-548E02E9BF60}"
 EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "AW_SL_AlcoholUsage_3_Cube", "AW_SL_AlcoholUsage_3_Cube\AW_SL_AlcoholUsage_3_Cube.dwproj", "{C21BE2D4-6A5E-40DF-93E0-18C814218017}"
+EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Kostka testowa", "Kostka testowa\Kostka testowa.dwproj", "{EB6412DB-E4D6-439C-8513-49CD92A07B66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Azure|Default = Azure|Default
@@ -23,6 +27,18 @@ Global
 		{2E500E26-3B89-4D5A-A6B6-548E02E9BF60}.Development|Default.ActiveCfg = Development
 		{2E500E26-3B89-4D5A-A6B6-548E02E9BF60}.Development|Default.Build.0 = Development
 		{2E500E26-3B89-4D5A-A6B6-548E02E9BF60}.Development|Default.Deploy.0 = Development
+		{C21BE2D4-6A5E-40DF-93E0-18C814218017}.Azure|Default.ActiveCfg = Development
+		{C21BE2D4-6A5E-40DF-93E0-18C814218017}.Azure|Default.Build.0 = Development
+		{C21BE2D4-6A5E-40DF-93E0-18C814218017}.Azure|Default.Deploy.0 = Development
+		{C21BE2D4-6A5E-40DF-93E0-18C814218017}.Development|Default.ActiveCfg = Development
+		{C21BE2D4-6A5E-40DF-93E0-18C814218017}.Development|Default.Build.0 = Development
+		{C21BE2D4-6A5E-40DF-93E0-18C814218017}.Development|Default.Deploy.0 = Development
+		{EB6412DB-E4D6-439C-8513-49CD92A07B66}.Azure|Default.ActiveCfg = Development
+		{EB6412DB-E4D6-439C-8513-49CD92A07B66}.Azure|Default.Build.0 = Development
+		{EB6412DB-E4D6-439C-8513-49CD92A07B66}.Azure|Default.Deploy.0 = Development
+		{EB6412DB-E4D6-439C-8513-49CD92A07B66}.Development|Default.ActiveCfg = Development
+		{EB6412DB-E4D6-439C-8513-49CD92A07B66}.Development|Default.Build.0 = Development
+		{EB6412DB-E4D6-439C-8513-49CD92A07B66}.Development|Default.Deploy.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

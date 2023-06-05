@@ -1,0 +1,205 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="fb116dd9-77c8-4a57-a9f6-a319ae2f6f5c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Alcohol Usage Cube 2</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>DIM ARRESTS FOR PUBLIC DRINKING</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="b4d3fa15-99f2-449e-91c7-72e174d81887">
+          <ID>DIM ARRESTS FOR PUBLIC DRINKING</ID>
+          <Name>DIM ARRESTS FOR PUBLIC DRINKING</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="9559f6be-6e63-45e0-9479-26c4c48e91fa">
+            <DataSourceViewID>Alcohol Usage DSV 2</DataSourceViewID>
+            <TableID>dbo_DIM_ARRESTS_FOR_PUBLIC_DRINKING</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>FACT ALCOHOL USAGE</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="39063ec7-09dc-4a7a-9f9f-271fe7da358c">
+          <ID>FACT ALCOHOL USAGE</ID>
+          <Name>FACT ALCOHOL USAGE</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="5f42e51b-c20a-4f54-a0ad-d48e61b0c64b">
+            <DataSourceViewID>Alcohol Usage DSV 2</DataSourceViewID>
+            <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>DIM YEAR</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="a7843d0b-24fc-4563-822f-d420083d81b8">
+          <ID>DIM YEAR</ID>
+          <Name>DIM YEAR</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="905c09ec-89bc-44ef-8cdc-3e8c7d635493">
+            <DataSourceViewID>Alcohol Usage DSV 2</DataSourceViewID>
+            <TableID>dbo_DIM_YEAR</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>DIM BAC</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="b0e840e7-ad6d-4286-8c30-e25d12646bde">
+          <ID>DIM BAC</ID>
+          <Name>DIM BAC</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="22699c73-9ef0-4def-9e4d-17e6e0129f58">
+            <DataSourceViewID>Alcohol Usage DSV 2</DataSourceViewID>
+            <TableID>dbo_DIM_BAC</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>ALCOHOL TYPE</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="bd3d737e-6162-4247-ae87-3a9670638578">
+          <ID>ALCOHOL TYPE</ID>
+          <Name>ALCOHOL TYPE</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="bf8d426a-a306-49ae-980a-c26e3438816f">
+            <DataSourceViewID>Alcohol Usage DSV 2</DataSourceViewID>
+            <TableID>dbo_ALCOHOL_TYPE</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>BAC GROUP</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="4b5a8eec-6826-4224-b99a-421d9adce1fd">
+          <ID>BAC GROUP</ID>
+          <Name>BAC GROUP</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c3540e0a-f5e7-43dd-ac79-8740d59f8b9a">
+            <DataSourceViewID>Alcohol Usage DSV 2</DataSourceViewID>
+            <TableID>dbo_BAC_GROUP</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>DIM EXCISE DUTY</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="0a59bd51-9a1c-4bf1-90b1-2070c857896a">
+          <ID>DIM EXCISE DUTY</ID>
+          <Name>DIM EXCISE DUTY</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="6927a255-d868-479e-9e1d-489f48a8647d">
+            <DataSourceViewID>Alcohol Usage DSV 2</DataSourceViewID>
+            <TableID>dbo_DIM_EXCISE_DUTY</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>DIM EXPENDITURE</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="7d62a9ad-4841-4c7e-93bf-2510c9d5cfcd">
+          <ID>DIM EXPENDITURE</ID>
+          <Name>DIM EXPENDITURE</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c894678b-3fbd-405d-9677-fbd42f0e394e">
+            <DataSourceViewID>Alcohol Usage DSV 2</DataSourceViewID>
+            <TableID>dbo_DIM_EXPENDITURE</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>DIM LOCATION</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="7aca124e-811c-45a4-896a-acfd11560e45">
+          <ID>DIM LOCATION</ID>
+          <Name>DIM LOCATION</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="aab2aaf9-732a-4d44-bda5-ac7c47c75dc1">
+            <DataSourceViewID>Alcohol Usage DSV 2</DataSourceViewID>
+            <TableID>dbo_DIM_LOCATION</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>DIM YOUTH DRINKERS</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="98194431-0f29-421a-835b-11db938b5a83">
+          <ID>DIM YOUTH DRINKERS</ID>
+          <Name>DIM YOUTH DRINKERS</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="4554c925-695b-4683-b1b3-7fbbfec741e0">
+            <DataSourceViewID>Alcohol Usage DSV 2</DataSourceViewID>
+            <TableID>dbo_DIM_YOUTH_DRINKERS</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>
