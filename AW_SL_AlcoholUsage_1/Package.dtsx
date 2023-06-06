@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="135"
-  DTS:VersionGUID="{F6589604-D5E0-46A7-B6B1-2902E1C3A016}">
+  DTS:VersionBuild="137"
+  DTS:VersionGUID="{30369645-3015-4C98-B1F7-BAB03574C51E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2102,7 +2102,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
-              SQLTask:SqlStatementSource="CREATE TABLE [FACT_ALCOHOL_USAGE] (&#xA;  [FACT_ALCOHOL_USAGE_ID] INT identity(1,1) PRIMARY KEY,&#xA;  [COUNTRY] VARCHAR(50),&#xA;  [YEAR] INT,&#xA;  [BAC] INT,&#xA;  [YOUTH_DRINKERS] INT,&#xA;  [EXCISET_DUTY] INT,&#xA;  [ARRESR_FOR_PUBLIC_DRINKING] INT,&#xA;  [EXPEDITIURE] INT,&#xA;  [ALCOHOLTYPE] INT,&#xA;  [CONSUMPTION] REAL,&#xA;  [RELATED_ROAD_TRAFFICS] REAL,&#xA;  [NATIONAL_POLICY] VARCHAR(50),&#xA;  [HEALTH_WARNING] VARCHAR(50)&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="CREATE TABLE [FACT_ALCOHOL_USAGE] (&#xA;  [FACT_ALCOHOL_USAGE_ID] INT identity(1,1) PRIMARY KEY,&#xA;  [COUNTRY] VARCHAR(50),&#xA;  [YEAR] INT,&#xA;  [BAC] INT,&#xA;  [YOUTH_DRINKERS] INT,&#xA;  [EXCISET_DUTY] INT,&#xA;  [ARRESR_FOR_PUBLIC_DRINKING] INT,&#xA;  [EXPEDITIURE] INT,&#xA;  [ALCOHOLTYPE] INT,&#xA;  [CONSUMPTION] REAL,&#xA;  [RELATED_ROAD_TRAFFICS] INT,&#xA;  [NATIONAL_POLICY] INT,&#xA;  [HEALTH_WARNING] INT&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -11014,7 +11014,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{244561C8-5038-4D5A-8DCD-645D6C9F165A}"
-              SQLTask:SqlStatementSource="INSERT INTO FACT_ALCOHOL_USAGE ([COUNTRY], [YEAR], [BAC], [YOUTH_DRINKERS], [EXCISET_DUTY], [ARRESR_FOR_PUBLIC_DRINKING], [EXPEDITIURE], [ALCOHOLTYPE], [CONSUMPTION], [RELATED_ROAD_TRAFFICS], [NATIONAL_POLICY], [HEALTH_WARNING])&#xA;SELECT au.COUNTRY, au.[YEAR], b.id AS [Bac], yd.id AS [YOUTH_DRINKERS], ed.id AS [EXCISET_DUTY], dafpd.id AS [ARRESR_FOR_PUBLIC_DRINKING], de.id AS [EXPEDITIURE], att.id As [ALCOHOLTYPE], au.[Display Value] As [CONSUMPTION], &#xA;&#x9;&#x9;&#x9;rrt.[Display Value] AS [RELATED_ROAD_TRAFFICS], wnp.[Name] AS [NATIONAL_POLICY], hw.[Name] AS [HEALTH_WARNING]&#xA;FROM AlcoholUsage au&#xA;LEFT JOIN ALCOHOL_TYPE att&#xA;&#x9;ON au.ALCOHOLTYPE = att.ALCOHOLTYPE&#xA;LEFT JOIN [DIM_HEALTH_WARNINGS] dhw&#xA;&#x9;ON au.COUNTRY = dhw.Country&#xA;LEFT JOIN [HEALTH_WARNINGS] hw&#xA;&#x9;ON dhw.Warning = hw.Name&#xA;LEFT JOIN [DIM_WRITTEN_NATIONAL_POLICY] dwnp&#xA;&#x9;ON au.COUNTRY = dwnp.Country&#xA;LEFT JOIN WRITTEN_NATIONAL_POLICY wnp&#xA;&#x9;ON dwnp.Policy = wnp.Name&#xA;LEFT JOIN [DIM_ARRESTS_FOR_PUBLIC_DRINKING] dafpd&#xA;&#x9;ON au.YEAR = dafpd.YEAR AND au.COUNTRY = dafpd.Country&#xA;LEFT JOIN [DIM_EXPENDITURE] de&#xA;&#x9;ON au.YEAR = de.YEAR AND au.COUNTRY = de.Country&#xA;LEFT JOIN [DIM_RELATED_ROAD_TRAFFIC] rrt&#xA;&#x9;ON au.YEAR = rrt.YEAR AND au.COUNTRY = rrt.Country&#xA;LEFT JOIN [DIM_YOUTH_DRINKERS] yd&#xA;&#x9;ON au.Country = yd.Country&#xA;LEFT JOIN [DIM_BAC] b&#xA;&#x9;ON au.COUNTRY = b.Country&#xA;LEFT JOIN [DIM_EXCISE_DUTY] ed&#xA;&#x9;ON au.YEAR = ed.YEAR AND au.COUNTRY = ed.Country AND att.id = ed.AlcoholType;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="INSERT INTO FACT_ALCOHOL_USAGE ([COUNTRY], [YEAR], [BAC], [YOUTH_DRINKERS], [EXCISET_DUTY], [ARRESR_FOR_PUBLIC_DRINKING], [EXPEDITIURE], [ALCOHOLTYPE], [CONSUMPTION], [RELATED_ROAD_TRAFFICS], [NATIONAL_POLICY], [HEALTH_WARNING])&#xA;SELECT au.COUNTRY, au.[YEAR], b.id AS [Bac], yd.id AS [YOUTH_DRINKERS], ed.id AS [EXCISET_DUTY], dafpd.id AS [ARRESR_FOR_PUBLIC_DRINKING], de.id AS [EXPEDITIURE], att.id As [ALCOHOLTYPE], au.[Display Value] As [CONSUMPTION], &#xA;&#x9;&#x9;&#x9;rrt.[Id] AS [RELATED_ROAD_TRAFFICS], wnp.[Id] AS [NATIONAL_POLICY], hw.[Id] AS [HEALTH_WARNING]&#xA;FROM AlcoholUsage au&#xA;LEFT JOIN ALCOHOL_TYPE att&#xA;&#x9;ON au.ALCOHOLTYPE = att.ALCOHOLTYPE&#xA;LEFT JOIN [DIM_HEALTH_WARNINGS] dhw&#xA;&#x9;ON au.COUNTRY = dhw.Country&#xA;LEFT JOIN [HEALTH_WARNINGS] hw&#xA;&#x9;ON dhw.Warning = hw.Name&#xA;LEFT JOIN [DIM_WRITTEN_NATIONAL_POLICY] dwnp&#xA;&#x9;ON au.COUNTRY = dwnp.Country&#xA;LEFT JOIN WRITTEN_NATIONAL_POLICY wnp&#xA;&#x9;ON dwnp.Policy = wnp.Name&#xA;LEFT JOIN [DIM_ARRESTS_FOR_PUBLIC_DRINKING] dafpd&#xA;&#x9;ON au.YEAR = dafpd.YEAR AND au.COUNTRY = dafpd.Country&#xA;LEFT JOIN [DIM_EXPENDITURE] de&#xA;&#x9;ON au.YEAR = de.YEAR AND au.COUNTRY = de.Country&#xA;LEFT JOIN [DIM_RELATED_ROAD_TRAFFIC] rrt&#xA;&#x9;ON au.YEAR = rrt.YEAR AND au.COUNTRY = rrt.Country&#xA;LEFT JOIN [DIM_YOUTH_DRINKERS] yd&#xA;&#x9;ON au.Country = yd.Country&#xA;LEFT JOIN [DIM_BAC] b&#xA;&#x9;ON au.COUNTRY = b.Country&#xA;LEFT JOIN [DIM_EXCISE_DUTY] ed&#xA;&#x9;ON au.YEAR = ed.YEAR AND au.COUNTRY = ed.Country AND att.id = ed.AlcoholType;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -12225,7 +12225,7 @@
         <NodeLayout
           Size="270,42"
           Id="Package\Create cube tables\Create FACT_ALCOHOL_USAGE table"
-          TopLeft="76.9090908984467,762.327985636749" />
+          TopLeft="76.9090908984467,760.899414208177" />
         <NodeLayout
           Size="210,42"
           Id="Package\Create cube tables\Create HEALTH_WARNINGS"
@@ -12304,30 +12304,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Create cube tables.PrecedenceConstraints[Constraint 10]"
-          TopLeft="212.109090898447,803.927985636749">
+          TopLeft="211.909090898447,802.899414208177">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-15.994802979397,30.2837782299245"
+              EndConnector="-15.794802979397,31.3123496584966"
               Start="0,0"
-              End="-15.994802979397,22.7837782299245">
+              End="-15.794802979397,23.8123496584966">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.1418891149622" />
+                    End="0,11.6561748292483" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.1418891149622"
-                    Point2="0,15.1418891149622"
-                    Point3="-4,15.1418891149622" />
+                    Point1="0,11.6561748292483"
+                    Point2="0,15.6561748292483"
+                    Point3="-4,15.6561748292483" />
                   <mssgle:LineSegment
-                    End="-11.994802979397,15.1418891149622" />
+                    End="-11.794802979397,15.6561748292483" />
                   <mssgle:CubicBezierSegment
-                    Point1="-11.994802979397,15.1418891149622"
-                    Point2="-15.994802979397,15.1418891149622"
-                    Point3="-15.994802979397,19.1418891149622" />
+                    Point1="-11.794802979397,15.6561748292483"
+                    Point2="-15.794802979397,15.6561748292483"
+                    Point3="-15.794802979397,19.6561748292483" />
                   <mssgle:LineSegment
-                    End="-15.994802979397,22.7837782299245" />
+                    End="-15.794802979397,23.8123496584966" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12486,14 +12486,14 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.3636363636365"
+              EndConnector="0,34.9350649350654"
               Start="0,0"
-              End="0,28.8636363636365">
+              End="0,27.4350649350654">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.8636363636365" />
+                    End="0,27.4350649350654" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
