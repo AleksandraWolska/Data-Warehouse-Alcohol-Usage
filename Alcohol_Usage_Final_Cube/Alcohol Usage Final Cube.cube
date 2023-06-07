@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="28" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-7759" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="76" x="20934" y="15558" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="28" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-7759" scrolltop="-2242" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="76" x="20934" y="15558" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
             </font>
@@ -445,7 +445,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-5000</Value>
+      <Value>-2242</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -735,52 +735,6 @@
       </Dimensions>
       <Partitions />
     </MeasureGroup>
-    <MeasureGroup dwd:design-time-name="95b7029c-44f0-44b1-9be8-b1ddade34741">
-      <ID>BAC GROUP</ID>
-      <Name>BAC GROUP</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
-      <State>Unprocessed</State>
-      <Measures>
-        <Measure dwd:design-time-name="8e52e712-5aaa-4b9c-b50f-79525e32befe">
-          <ID>BAC GROUP Count</ID>
-          <Name>BAC GROUP Count</Name>
-          <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="3473154d-0810-4a5d-96e9-8990e9b10fbb">
-            <DataType>Integer</DataType>
-            <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="bac6b3bf-bb49-4d7c-adb4-bd845d049c1c">
-              <TableID>dbo_BAC_GROUP</TableID>
-            </Source>
-          </Source>
-        </Measure>
-      </Measures>
-      <StorageMode>Molap</StorageMode>
-      <ProcessingMode>Regular</ProcessingMode>
-      <Dimensions>
-        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="d50cc616-1c0e-4e03-9a8c-520fb730ee2f">
-          <CubeDimensionID>BAC GROUP</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="e95b719c-9bf0-46ed-9c5b-a9670189b5c6">
-              <AttributeID>BACGROUP</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="5deeb6de-9ddb-46c2-9bfd-e9810e6e2571">
-                  <DataType>WChar</DataType>
-                  <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2f76852a-f967-4d99-bf7f-784c6a5f8e69">
-                    <TableID>dbo_BAC_GROUP</TableID>
-                    <ColumnID>BACGROUP</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
-      </Dimensions>
-      <Partitions />
-    </MeasureGroup>
     <MeasureGroup dwd:design-time-name="66b0378c-b1f2-4be1-9f26-0ab0fc5e8e49">
       <ID>WRITTEN NATIONAL POLICY</ID>
       <Name>WRITTEN NATIONAL POLICY</Name>
@@ -913,17 +867,6 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="cb259a45-8b87-4a4e-b35a-766fe0dcecd0">
-          <ID>YEAR - DIM BAC</ID>
-          <Name>YEAR - DIM BAC</Name>
-          <Source dwd:design-time-name="734a0388-d010-44d5-af93-1e0472c92965">
-            <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="86a55595-1173-4838-b8b3-2784e07f4eca">
-              <TableID>dbo_DIM_BAC</TableID>
-              <ColumnID>YEAR</ColumnID>
-            </Source>
-          </Source>
-        </Measure>
         <Measure dwd:design-time-name="ed26c2c2-f011-4e97-88b8-c07e8e977e82">
           <ID>TOLERANCE</ID>
           <Name>TOLERANCE</Name>
@@ -932,18 +875,6 @@
             <Source xsi:type="ColumnBinding" dwd:design-time-name="6230d11b-6869-48ce-9cc4-9ed407f62b6c">
               <TableID>dbo_DIM_BAC</TableID>
               <ColumnID>TOLERANCE</ColumnID>
-            </Source>
-          </Source>
-        </Measure>
-        <Measure dwd:design-time-name="838377e2-4efa-41cc-88fd-2b0d0fe99453">
-          <ID>DIM BAC Count</ID>
-          <Name>DIM BAC Count</Name>
-          <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="0717eebe-fa54-400e-80f1-5004e5212618">
-            <DataType>Integer</DataType>
-            <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="db5458a1-b84a-4e9a-880d-9a4817c312c3">
-              <TableID>dbo_DIM_BAC</TableID>
             </Source>
           </Source>
         </Measure>
@@ -980,17 +911,6 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="e2077aa0-d6cf-4d8b-90e8-1ce8df465da2">
-          <ID>YEAR - DIM EXCISE DUTY</ID>
-          <Name>YEAR - DIM EXCISE DUTY</Name>
-          <Source dwd:design-time-name="4602d09d-045f-4590-97d6-a93c5fc78316">
-            <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="4bd01278-1cb2-4551-acc8-689e3cb39922">
-              <TableID>dbo_DIM_EXCISE_DUTY</TableID>
-              <ColumnID>YEAR</ColumnID>
-            </Source>
-          </Source>
-        </Measure>
         <Measure dwd:design-time-name="770677d1-3e78-440a-8dff-0609c5d0e6dd">
           <ID>EXPENDITURE</ID>
           <Name>EXPENDITURE</Name>
@@ -999,18 +919,6 @@
             <Source xsi:type="ColumnBinding" dwd:design-time-name="dd851375-a185-4f58-8cbe-8c34fd2306f1">
               <TableID>dbo_DIM_EXCISE_DUTY</TableID>
               <ColumnID>EXPENDITURE</ColumnID>
-            </Source>
-          </Source>
-        </Measure>
-        <Measure dwd:design-time-name="ef0672d7-3923-4afa-b675-910d9f72a3f5">
-          <ID>DIM EXCISE DUTY Count</ID>
-          <Name>DIM EXCISE DUTY Count</Name>
-          <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="7fe92c43-3f57-4ea0-ad46-76dc7ae5e719">
-            <DataType>Integer</DataType>
-            <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="c3ac69de-8eed-4ad8-9cb4-7732639134a6">
-              <TableID>dbo_DIM_EXCISE_DUTY</TableID>
             </Source>
           </Source>
         </Measure>
@@ -1066,17 +974,6 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="f1c1c7cd-4b44-4993-bba0-35cafeb054f6">
-          <ID>YEAR - DIM EXPENDITURE</ID>
-          <Name>YEAR - DIM EXPENDITURE</Name>
-          <Source dwd:design-time-name="5655eaa0-3c9e-4258-8950-435682d35978">
-            <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="0c117b2b-692b-488e-bcfd-8836ef74b0a4">
-              <TableID>dbo_DIM_EXPENDITURE</TableID>
-              <ColumnID>YEAR</ColumnID>
-            </Source>
-          </Source>
-        </Measure>
         <Measure dwd:design-time-name="a3470eb2-b0e0-403f-ad5e-d5ae5883ea2f">
           <ID>VALUE</ID>
           <Name>VALUE</Name>
@@ -1085,18 +982,6 @@
             <Source xsi:type="ColumnBinding" dwd:design-time-name="81acbc75-a8d5-49fa-b940-534a16d13ef8">
               <TableID>dbo_DIM_EXPENDITURE</TableID>
               <ColumnID>VALUE</ColumnID>
-            </Source>
-          </Source>
-        </Measure>
-        <Measure dwd:design-time-name="1d73fbc5-4b3a-4d25-8369-104d4914d78e">
-          <ID>DIM EXPENDITURE Count</ID>
-          <Name>DIM EXPENDITURE Count</Name>
-          <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="4d70ce8f-04a1-4426-b7b6-6a3e8ad2041c">
-            <DataType>Integer</DataType>
-            <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="e5539675-f6b3-466d-bc7e-285996d284cc">
-              <TableID>dbo_DIM_EXPENDITURE</TableID>
             </Source>
           </Source>
         </Measure>
@@ -1115,109 +1000,6 @@
                   <Source xsi:type="ColumnBinding" dwd:design-time-name="46ed4b09-53e0-419d-a2fe-1fb055b9ec4c">
                     <TableID>dbo_DIM_EXPENDITURE</TableID>
                     <ColumnID>ID</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
-      </Dimensions>
-      <Partitions />
-    </MeasureGroup>
-    <MeasureGroup dwd:design-time-name="540704f5-83b9-4fda-96f9-c84c3d4a73bd">
-      <ID>DIM HEALTH WARNINGS</ID>
-      <Name>DIM HEALTH WARNINGS</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
-      <State>Unprocessed</State>
-      <Measures>
-        <Measure dwd:design-time-name="3048ad83-86be-42d8-81b2-561d0a3ca32c">
-          <ID>DIM HEALTH WARNINGS Count</ID>
-          <Name>DIM HEALTH WARNINGS Count</Name>
-          <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="a92b65b3-be51-4af4-b437-d354d9fed469">
-            <DataType>Integer</DataType>
-            <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="c91c5d2b-647d-4347-a887-5d7d5e856bd7">
-              <TableID>dbo_DIM_HEALTH_WARNINGS</TableID>
-            </Source>
-          </Source>
-        </Measure>
-        <Measure dwd:design-time-name="1b7ad45c-8d82-406c-a1a0-487f09da1141">
-          <ID>Id - DIM HEALTH WARNINGS</ID>
-          <Name>Id - DIM HEALTH WARNINGS</Name>
-          <AggregateFunction>None</AggregateFunction>
-          <Source dwd:design-time-name="2ae146e7-5b8a-456c-b241-4f720b40f1c9">
-            <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="85a9324a-1661-4c57-9409-eaa3d39f218c">
-              <TableID>dbo_DIM_HEALTH_WARNINGS</TableID>
-              <ColumnID>Id</ColumnID>
-            </Source>
-          </Source>
-        </Measure>
-      </Measures>
-      <StorageMode>Molap</StorageMode>
-      <ProcessingMode>Regular</ProcessingMode>
-      <Dimensions>
-        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="8fbd201a-0042-461d-9313-5ec7fbd26f05">
-          <CubeDimensionID>DIM HEALTH WARNINGS</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="7b6869b2-88c9-415b-a797-b2656bbf6872">
-              <AttributeID>Id</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="c306f88a-3779-4b52-a623-82ed29c5305a">
-                  <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6689845f-628a-4905-97e0-48ed19498aec">
-                    <TableID>dbo_DIM_HEALTH_WARNINGS</TableID>
-                    <ColumnID>Id</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
-      </Dimensions>
-      <Partitions />
-    </MeasureGroup>
-    <MeasureGroup dwd:design-time-name="fe0a5099-d2f6-4a32-bea0-348d9e3abb80">
-      <ID>DIM LOCATION</ID>
-      <Name>DIM LOCATION</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
-      <State>Unprocessed</State>
-      <Measures>
-        <Measure dwd:design-time-name="f09d978d-efe4-4e06-a606-ee25cf9c92d3">
-          <ID>DIM LOCATION Count</ID>
-          <Name>DIM LOCATION Count</Name>
-          <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="b8909622-dfeb-451a-889a-95fe44d986e8">
-            <DataType>Integer</DataType>
-            <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="2738c641-bace-4687-8e9f-7599019aaf44">
-              <TableID>dbo_DIM_LOCATION</TableID>
-            </Source>
-          </Source>
-        </Measure>
-      </Measures>
-      <StorageMode>Molap</StorageMode>
-      <ProcessingMode>Regular</ProcessingMode>
-      <Dimensions>
-        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="ae2699fa-d2da-42d5-abde-74b038f6a68f">
-          <CubeDimensionID>DIM LOCATION</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="6467cdcd-6524-431e-999d-c10f5340acd9">
-              <AttributeID>COUNTRY</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="efa6fdef-16f7-4b51-bb8f-6db8bcb62545">
-                  <DataType>WChar</DataType>
-                  <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="75033d31-857b-4679-9072-748eb56ff62e">
-                    <TableID>dbo_DIM_LOCATION</TableID>
-                    <ColumnID>COUNTRY</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
@@ -1295,96 +1077,6 @@
       </Dimensions>
       <Partitions />
     </MeasureGroup>
-    <MeasureGroup dwd:design-time-name="1a05f793-1509-439b-8d1d-b438011b4d14">
-      <ID>DIM WRITTEN NATIONAL POLICY</ID>
-      <Name>DIM WRITTEN NATIONAL POLICY</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
-      <State>Unprocessed</State>
-      <Measures>
-        <Measure dwd:design-time-name="45129402-a0ba-41dc-bcb4-d434dac928b4">
-          <ID>Id - DIM WRITTEN NATIONAL POLICY</ID>
-          <Name>Id - DIM WRITTEN NATIONAL POLICY</Name>
-          <AggregateFunction>None</AggregateFunction>
-          <Source dwd:design-time-name="5c3614b1-4570-4f6f-9013-5272adf799c3">
-            <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="5326ff96-fd6c-4ffd-a53e-06be7aea12f6">
-              <TableID>dbo_DIM_WRITTEN_NATIONAL_POLICY</TableID>
-              <ColumnID>Id</ColumnID>
-            </Source>
-          </Source>
-        </Measure>
-      </Measures>
-      <StorageMode>Molap</StorageMode>
-      <ProcessingMode>Regular</ProcessingMode>
-      <Dimensions>
-        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="ef5515ca-9b9b-457e-825c-96673e884f43">
-          <CubeDimensionID>DIM WRITTEN NATIONAL POLICY</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="74bfd753-4ff6-4895-8870-cff69ad5c6d4">
-              <AttributeID>Id</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="77f986a8-50f6-46c0-9772-1822d0fd4c4d">
-                  <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="dae49590-e23c-4c42-955f-df631a6879ad">
-                    <TableID>dbo_DIM_WRITTEN_NATIONAL_POLICY</TableID>
-                    <ColumnID>Id</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
-      </Dimensions>
-      <Partitions />
-    </MeasureGroup>
-    <MeasureGroup dwd:design-time-name="5ae4664a-63b1-41ff-b243-4c1b6dfbb4ff">
-      <ID>DIM YEAR</ID>
-      <Name>DIM YEAR</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
-      <State>Unprocessed</State>
-      <Measures>
-        <Measure dwd:design-time-name="9b7fb4c8-67c5-4fbe-9656-583526eb3d78">
-          <ID>DIM YEAR Count</ID>
-          <Name>DIM YEAR Count</Name>
-          <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="f486dfa7-e893-481f-885f-8787571ef02f">
-            <DataType>Integer</DataType>
-            <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="ee8ddb93-79ef-4277-b72f-a7a4186c8cf1">
-              <TableID>dbo_DIM_YEAR</TableID>
-            </Source>
-          </Source>
-        </Measure>
-      </Measures>
-      <StorageMode>Molap</StorageMode>
-      <ProcessingMode>Regular</ProcessingMode>
-      <Dimensions>
-        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="5158de7b-5833-4985-87c7-248ee70f7b9d">
-          <CubeDimensionID>DIM YEAR</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="d676e56d-af66-4683-b9f9-a3fedd205768">
-              <AttributeID>YEAR</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="cb171834-42e1-4f4d-8411-af16ba6067c2">
-                  <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="931fafdd-1444-4438-b236-7ce271a483d4">
-                    <TableID>dbo_DIM_YEAR</TableID>
-                    <ColumnID>YEAR</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
-      </Dimensions>
-      <Partitions />
-    </MeasureGroup>
     <MeasureGroup dwd:design-time-name="0ec1bf9d-a700-46c0-ad03-c2bfc1d7e3eb">
       <ID>DIM YOUTH DRINKERS</ID>
       <Name>DIM YOUTH DRINKERS</Name>
@@ -1401,18 +1093,6 @@
             <Source xsi:type="ColumnBinding" dwd:design-time-name="f1d548a2-248c-495f-8aff-9607664995bc">
               <TableID>dbo_DIM_YOUTH_DRINKERS</TableID>
               <ColumnID>DRINKERS</ColumnID>
-            </Source>
-          </Source>
-        </Measure>
-        <Measure dwd:design-time-name="37d02e5c-8b3e-4c11-a0ce-dc45a1d37442">
-          <ID>DIM YOUTH DRINKERS Count</ID>
-          <Name>DIM YOUTH DRINKERS Count</Name>
-          <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="75cd9e9a-6b54-4921-80f1-1f7e1b209d98">
-            <DataType>Integer</DataType>
-            <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="37580ebd-b09b-4fda-8184-0f0428a40a43">
-              <TableID>dbo_DIM_YOUTH_DRINKERS</TableID>
             </Source>
           </Source>
         </Measure>
@@ -1457,18 +1137,6 @@
             <Source xsi:type="ColumnBinding" dwd:design-time-name="cf70a8ab-a337-4c4e-a369-3aea28224d0b">
               <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
               <ColumnID>CONSUMPTION</ColumnID>
-            </Source>
-          </Source>
-        </Measure>
-        <Measure dwd:design-time-name="09d9e168-0706-4984-bb84-281486f75f40">
-          <ID>FACT ALCOHOL USAGE Count</ID>
-          <Name>FACT ALCOHOL USAGE Count</Name>
-          <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="07062fe0-cbc5-4c59-ac11-a2b80e199501">
-            <DataType>Integer</DataType>
-            <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="baeff4b5-7c34-4bc4-bd64-2ea04d022cd6">
-              <TableID>dbo_FACT_ALCOHOL_USAGE</TableID>
             </Source>
           </Source>
         </Measure>
@@ -1710,18 +1378,6 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="030e861a-f739-46b0-8ad3-153489888420">
-          <ID>HEALTH WARNINGS Count</ID>
-          <Name>HEALTH WARNINGS Count</Name>
-          <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="8a6b1591-8665-4740-bb81-d52ac9dd2c80">
-            <DataType>Integer</DataType>
-            <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="0a91b414-1ba9-4f60-9827-995f1ff44e4d">
-              <TableID>dbo_HEALTH_WARNINGS</TableID>
-            </Source>
-          </Source>
-        </Measure>
         <Measure dwd:design-time-name="f77bee6e-6d45-496f-95ed-803c9818a26b">
           <ID>Id - HEALTH WARNINGS</ID>
           <Name>Id - HEALTH WARNINGS</Name>
