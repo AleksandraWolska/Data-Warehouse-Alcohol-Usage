@@ -7,6 +7,8 @@ Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "AW_SL_AlcoholUsage_1", "AW_
 EndProject
 Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "AW_SL_AlcoholUsage_Cube", "AW_SL_AlcoholUsage_Cube\AW_SL_AlcoholUsage_Cube.dwproj", "{2E500E26-3B89-4D5A-A6B6-548E02E9BF60}"
 EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Alcohol_Usage_Final_Cube", "Alcohol_Usage_Final_Cube\Alcohol_Usage_Final_Cube.dwproj", "{B9D93401-5E5A-47C5-A2D5-4C8C19FD690E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Azure|Default = Azure|Default
@@ -23,6 +25,12 @@ Global
 		{2E500E26-3B89-4D5A-A6B6-548E02E9BF60}.Development|Default.ActiveCfg = Development
 		{2E500E26-3B89-4D5A-A6B6-548E02E9BF60}.Development|Default.Build.0 = Development
 		{2E500E26-3B89-4D5A-A6B6-548E02E9BF60}.Development|Default.Deploy.0 = Development
+		{B9D93401-5E5A-47C5-A2D5-4C8C19FD690E}.Azure|Default.ActiveCfg = Development
+		{B9D93401-5E5A-47C5-A2D5-4C8C19FD690E}.Azure|Default.Build.0 = Development
+		{B9D93401-5E5A-47C5-A2D5-4C8C19FD690E}.Azure|Default.Deploy.0 = Development
+		{B9D93401-5E5A-47C5-A2D5-4C8C19FD690E}.Development|Default.ActiveCfg = Development
+		{B9D93401-5E5A-47C5-A2D5-4C8C19FD690E}.Development|Default.Build.0 = Development
+		{B9D93401-5E5A-47C5-A2D5-4C8C19FD690E}.Development|Default.Deploy.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

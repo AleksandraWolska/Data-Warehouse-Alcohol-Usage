@@ -1,0 +1,160 @@
+﻿<Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <ProductVersion>16.0.20309.0</ProductVersion>
+  <SchemaVersion>9.0.2.10</SchemaVersion>
+  <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmRkbDEwMF8xMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDA4L2VuZ2luZS8xMDAvMTAwIiB4bWxuczpkZGwyMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAiIHhtbG5zOmRkbDIwMF8yMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAvMjAwIiB4bWxuczpkZGwzMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAiIHhtbG5zOmRkbDMwMF8zMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAvMzAwIiB4bWxuczpkZGw0MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAiIHhtbG5zOmRkbDQwMF80MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAvNDAwIiB4bWxuczpkZGw1MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAiIHhtbG5zOmRkbDUwMF81MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAvNTAwIiB4bWxuczpkd2Q9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vRGF0YVdhcmVob3VzZS9EZXNpZ25lci8xLjAiPg0KICA8RW5hYmxlZD5mYWxzZTwvRW5hYmxlZD4NCiAgPFByb2plY3ROYW1lPjwvUHJvamVjdE5hbWU+DQogIDxBdXhQYXRoPjwvQXV4UGF0aD4NCiAgPExvY2FsUGF0aD48L0xvY2FsUGF0aD4NCiAgPFByb3ZpZGVyPjwvUHJvdmlkZXI+DQo8L1NvdXJjZUNvbnRyb2xJbmZvPg==</State>
+  <Database>
+    <Name>Alcohol_Usage_Final_Cube.database</Name>
+    <FullPath>Alcohol_Usage_Final_Cube.database</FullPath>
+  </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Alcohol Usage Final Cube.cube</Name>
+      <FullPath>Alcohol Usage Final Cube.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Alcohol Usage Final Cube.partitions</Name>
+          <FullPath>Alcohol Usage Final Cube.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Alcohol Usage HW.cube</Name>
+      <FullPath>Alcohol Usage HW.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Alcohol Usage HW.partitions</Name>
+          <FullPath>Alcohol Usage HW.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Alcohol Usage Correct.cube</Name>
+      <FullPath>Alcohol Usage Correct.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Alcohol Usage Correct.partitions</Name>
+          <FullPath>Alcohol Usage Correct.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>ALCOHOL TYPE.dim</Name>
+      <FullPath>ALCOHOL TYPE.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BAC GROUP.dim</Name>
+      <FullPath>BAC GROUP.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>WRITTEN NATIONAL POLICY.dim</Name>
+      <FullPath>WRITTEN NATIONAL POLICY.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM ARRESTS FOR PUBLIC DRINKING.dim</Name>
+      <FullPath>DIM ARRESTS FOR PUBLIC DRINKING.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM BAC.dim</Name>
+      <FullPath>DIM BAC.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM EXCISE DUTY.dim</Name>
+      <FullPath>DIM EXCISE DUTY.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM EXPENDITURE.dim</Name>
+      <FullPath>DIM EXPENDITURE.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM HEALTH WARNINGS.dim</Name>
+      <FullPath>DIM HEALTH WARNINGS.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM LOCATION.dim</Name>
+      <FullPath>DIM LOCATION.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM RELATED ROAD TRAFFIC.dim</Name>
+      <FullPath>DIM RELATED ROAD TRAFFIC.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM WRITTEN NATIONAL POLICY.dim</Name>
+      <FullPath>DIM WRITTEN NATIONAL POLICY.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM YEAR.dim</Name>
+      <FullPath>DIM YEAR.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM YOUTH DRINKERS.dim</Name>
+      <FullPath>DIM YOUTH DRINKERS.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>HEALTH WARNINGS.dim</Name>
+      <FullPath>HEALTH WARNINGS.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>HEALTH WARNINGS 1.dim</Name>
+      <FullPath>HEALTH WARNINGS 1.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM ARRESTS FOR PUBLIC DRINKING 1.dim</Name>
+      <FullPath>DIM ARRESTS FOR PUBLIC DRINKING 1.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM BAC 1.dim</Name>
+      <FullPath>DIM BAC 1.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM EXPENDITURE 1.dim</Name>
+      <FullPath>DIM EXPENDITURE 1.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM HEALTH WARNINGS 1.dim</Name>
+      <FullPath>DIM HEALTH WARNINGS 1.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM RELATED ROAD TRAFFIC 1.dim</Name>
+      <FullPath>DIM RELATED ROAD TRAFFIC 1.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM YOUTH DRINKERS 1.dim</Name>
+      <FullPath>DIM YOUTH DRINKERS 1.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>Alcohol Usage DS.ds</Name>
+      <FullPath>Alcohol Usage DS.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Alcohol Usage DSV.dsv</Name>
+      <FullPath>Alcohol Usage DSV.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Alcohol Usage DS</Id>
+            <Name>Alcohol Usage DS</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-9KKFAQR;Integrated Security=SSPI;Initial Catalog=AlcoholUsage</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Alcohol Usage DS</Id>
+            <Name>Alcohol Usage DS</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
+    </Configuration>
+  </Configurations>
+</Project>
